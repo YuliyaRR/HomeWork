@@ -2,7 +2,7 @@ package home_work_3.calcs.additional;
 
 import home_work_3.calcs.api.ICalculator;
 
-public class CalculatorWithMemory implements ICalculator{
+public class CalculatorWithMemory {
 
     private ICalculator iCalculator;
     private long countOperation;
