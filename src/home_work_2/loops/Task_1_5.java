@@ -1,70 +1,13 @@
 package home_work_2.loops;
 
+import java.util.Arrays;
 import java.util.Random;
-import java.util.Scanner;
 
 public class Task_1_5 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите натуральное число");
-        int number = scanner.nextInt();
-        int maxDigit = maxDigitInNumber(number);
-        System.out.printf("Максимальная цифра в числе %d - %d", number, maxDigit);
-
-        System.out.println("Введите нижнюю границу диапазона, на котором хотите узнать вероятность выпадения четных чисел");
-        int min = scanner.nextInt();
-        System.out.println("Введите верхнюю границу диапазона, на котором хотите узнать вероятность выпадения четных чисел");
-        int max = scanner.nextInt();
-        double probability = probabilityOfEvenNumbers(min, max);
-        System.out.printf("Для интервала [%d, %d] вероятность выпадения четных чисел составляет " + probability +"%%", min, max);
-
-        System.out.println("Введите натуральное число");
-        int numb = scanner.nextInt();
-        String result = numberOfEvenAndOddDigits(numb);
-        System.out.println("В числе " + numb + result);
-
-        System.out.println("Введите количество элементов ряда Фибоначчи, которое необходимо вывести на экран");
-        int amountOfElements = scanner.nextInt();
-        String fibonacciSeries = fibonacciSeriesElements(amountOfElements);
-        System.out.println(fibonacciSeries);
-
-        System.out.println("Введите начальное число диапазона");
-        int startNumber = scanner.nextInt();
-        System.out.println("Введите конечное число диапазона");
-        int endNumber = scanner.nextInt();
-        System.out.println("Введите шаг диапазона");
-        int step = scanner.nextInt();
-        String allNumb;
-        if (startNumber == endNumber && endNumber == step) {
-            allNumb = "Диапазон пуст";
-        } else if (startNumber > endNumber) {
-            allNumb = "Неверные границы диапазона";
-        } else { //startNumber < endNumber
-            if (step > (endNumber - startNumber)) {
-                allNumb = "Заданный шаг превышает размер диапазона";
-            } else if (step == 0) {
-                allNumb = "Невозможно заполнить диапазон значениями, шаг равен нулю";
-            } else {
-                allNumb = allNumbersInRange(startNumber, endNumber, step);
-            }
-        }
-        System.out.println(allNumb);
-
-        System.out.println("Введите натуральное число");
-        int natNum = scanner.nextInt();
-        String reverse;
-        if (natNum == 0) {
-            reverse = "0";
-        } else {
-            reverse = turnNumber(natNum);
-        }
-        System.out.printf("Обратная запись числа %d: " + reverse, natNum);
-
-    }
 
     /**
-     * Метод ищет максимальную цифру в числе
-     * @param num - число, введенное пользователем
+     * Метод ищет максимальную цифру в натуральном числе
+     * @param num - натуральное число, введенное пользователем
      * @return - максимальная цифра в переданном числе
      */
     public static int maxDigitInNumber (int num) {
@@ -90,13 +33,50 @@ public class Task_1_5 {
         double resultOfProbability;
         Random random = new Random();
         for (int i = 0; i < 1000 ; i++) {
-            int randomNum = random.nextInt(maxBound - minBound + 1) + minBound;
+            int randomNum = random.nextInt(maxBound - minBound) + minBound;
             if (randomNum % 2 == 0) {
                 countEvenNumber++;
             }
         }
         resultOfProbability = countEvenNumber / 1000 * 100;
         return resultOfProbability;
+    }
+
+    /**
+     * Перегрузка метода probabilityOfEvenNumbers (int minBound, int maxBound) для тестирования
+     * @param arr - массив, на котором определяется вероятность четных чисел
+     * @return - вероятность выпадения четных чисел в %.
+     */
+    public static double probabilityOfEvenNumbers (int[]arr) {
+        if(arr.length == 0) {
+            return 0;
+        }
+        double countEvenNumber = 0;
+        double resultOfProbability;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 == 0) {
+                countEvenNumber++;
+            }
+        }
+        resultOfProbability = countEvenNumber / arr.length * 100;
+        return resultOfProbability;
+    }
+
+    /**
+     * Метод генерирует рандомный массив заданного размера и содержащий числа в заданном диапазоне
+     * @param size - размер будущего массива
+     * @param minBound - минимальное возможное число, содержащееся в массиве
+     * @param maxBound - максимальное возможное число, содержащееся в массиве
+     * @return - int-массив, заполненный рандомными числами
+     */
+    public static int[] randomArray(int size, int minBound, int maxBound) {
+        int []arr = new int[size];
+        Random random = new Random();
+        for (int i = 0; i < size ; i++) {
+            int randomNum = random.nextInt(maxBound - minBound) + minBound;
+            arr[i] = randomNum;
+        }
+        return arr;
     }
 
     /**
@@ -117,7 +97,7 @@ public class Task_1_5 {
             n = n / 10;
         } while (n != 0);
 
-        return String.format(" четных цифр - %d, нечетных цифр - %d", countEven, countOdd);
+        return String.format("четных цифр - %d, нечетных цифр - %d", countEven, countOdd);
     }
 
     /**
@@ -130,6 +110,10 @@ public class Task_1_5 {
         int fib2 = 2;
         int count = 2;
         String result = "" + fib1 + " " + fib2;
+
+        if (amount == 0) {
+            return "0";
+        }
 
         if (amount == 1) {
             result = "" + fib1;
@@ -154,12 +138,29 @@ public class Task_1_5 {
      * @return - строка - последовательность чисел
      */
     public static String allNumbersInRange (int start, int end, int st) {
-        String result = "";
-        for (int i = start; i <= end ; i += st) {
-            result = result + i + " ";
+
+        if (start == end) {
+            return "Диапазон пуст";
+        } else if (start > end) {
+            return "Неверные границы диапазона";
+        } else { //startNumber < endNumber
+            if (st > (end - start)) {
+                return "Заданный шаг превышает размер диапазона";
+            } else if (st == 0) {
+                return "Невозможно заполнить диапазон значениями, шаг равен нулю";
+            } else {
+                StringBuilder stb = new StringBuilder();
+                for (int i = start; i <= end; i += st) {
+                    stb.append(i);
+                    if(i != end) {
+                        stb.append(" ");
+                    }
+                }
+                return stb.toString();
+            }
         }
-        return result;
     }
+
 
     /**
      * Метод разворачивает полученное число
@@ -168,6 +169,11 @@ public class Task_1_5 {
      */
     public static String turnNumber (int nat) {
         String result = "";
+
+        if (nat == 0) {
+            return "0";
+        }
+
         while (nat != 0){
             int rest = nat % 10;
             result = result + rest;

@@ -1,26 +1,6 @@
 package home_work_2.loops;
 
-
-
-
 public class Task_1_2 {
-    public static void main(String[] args) {
-        System.out.println("Введите целое число");
-        String userNumber = args[0];
-        System.out.println(userNumber);
-        String calculationAndResult;
-        int dataCheck = dataValidation(userNumber);
-
-        if (dataCheck == -1) {
-            System.out.println("Введено дробное число!");
-        } else if (dataCheck == -2) {
-            System.out.println("Введено не число");
-        } else {
-            calculationAndResult = multiplicationOfAllDigits(userNumber);
-            System.out.println(calculationAndResult);
-        }
-
-    }
 
     /**
      * Метод проверяет корректность введенных пользователем данных (содержит ли строка только целые числа)
@@ -61,26 +41,34 @@ public class Task_1_2 {
     /**
      * Метод перемножает между собой цифры, составляющие число, введенное пользователем
      * @param fromUser - число, введенное пользователем
-     * @return строку в виде примера: содержит все цифры из числа пользователя перемноженные между собой
-     *         и результат умножения.
+     * @return результат перемножения всех цифр числа.
      */
-    public static String multiplicationOfAllDigits (String fromUser) {
-        String [] userNumberToStringArray = fromUser.split("");
-        int [] toIntArray = new int[userNumberToStringArray.length];
-        String sample = "";
-        int resultOfMultiply = 1;
+     public static long multiplicationOfAllDigits (int fromUser) {
+        long resultOfMultiply = 1;
+        int digit;
+        while (fromUser != 0) {
+            digit = fromUser % 10;
+            resultOfMultiply = resultOfMultiply * digit;
+            fromUser = fromUser / 10;
+        }
+        return resultOfMultiply;
+    }
 
-        for (int i = 0; i < toIntArray.length; i++) {
-            toIntArray [i] = Integer.parseInt(userNumberToStringArray[i]);
-            sample = sample + toIntArray [i];
-            resultOfMultiply = resultOfMultiply * toIntArray[i];
-            if(i == toIntArray.length-1) {
-                sample = sample + " = " + resultOfMultiply;
-            }else {
-                sample = sample + " * ";
+
+    public static String sampleView (String fromUser) {
+        int userNum = Integer.parseInt(fromUser);
+        StringBuilder stb = new StringBuilder();
+        int stringLength = fromUser.length();
+        for (int i = 0; i < stringLength; i++) {
+            stb.append(fromUser.charAt(i));
+            if (i == stringLength - 1) {
+                stb.append(" = ").append(multiplicationOfAllDigits(userNum));
+            } else {
+                stb.append(" * ");
             }
         }
-        return sample;
 
+        return stb.toString();
     }
+
 }

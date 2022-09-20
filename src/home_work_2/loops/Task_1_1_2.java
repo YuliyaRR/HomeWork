@@ -1,40 +1,6 @@
 package home_work_2.loops;
 
-import java.util.Scanner;
-
 public class Task_1_1_2 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int userNumber;
-        do {
-            System.out.println("Введите целое число больше ноля");
-            userNumber = scanner.nextInt();
-            if (userNumber < 0) {
-                System.out.println("Некорректный ввод! Отрицательное число!");
-            } else if (userNumber == 0) {
-                System.out.println("Некорректный ввод! Вы ввели ноль!");
-            }
-        } while (userNumber <= 0);
-
-        System.out.println("Вычисление:");
-        String sample = "";
-        for (int i = 1; i <= userNumber; i++) {
-            sample = sample + i + " ";
-            if (i < userNumber) {
-                sample = sample + "* ";
-            } else {
-                sample = sample + "= ";
-            }
-        }
-        long result = factorial(userNumber);
-        if (result <= 0) {
-            System.out.println("Переполнение! Слишком большое число");
-            System.out.println(sample + result);
-        } else {
-            System.out.println(sample + result);
-        }
-
-    }
 
     public static long factorial(int num) {
         long result = 1;
@@ -45,4 +11,42 @@ public class Task_1_1_2 {
 
         return result;
     }
+
+    public static String makeSample (String num) {
+        int number = Integer.parseInt(num);
+        StringBuilder stb = new StringBuilder();
+        if (checkData(number)) {
+            long fact = factorial(number);
+            for (int i = 1; i <= number ; i++) {
+                stb.append(i);
+                if(i == number) {
+                    stb.append(" = ");
+                } else {
+                    stb.append(" * ");
+                }
+            }
+            if(checkOverflowInt(fact)) {
+                stb.append("Переполнение! Слишком большое число!");
+            } else {
+                stb.append(fact);
+            }
+            return stb.toString();
+        } else {
+            return "Некорректные данные";
+        }
+    }
+
+    public static boolean checkOverflowInt (long number) {
+        return number > Integer.MAX_VALUE || number <= 0;
+    }
+
+    public static boolean checkData(int num) {
+        return num > 0;
+    }
+
+
+
+
+
+
 }

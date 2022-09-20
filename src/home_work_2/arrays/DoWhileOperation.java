@@ -3,49 +3,49 @@ package home_work_2.arrays;
 public class DoWhileOperation implements IArraysOperation {
 
     @Override
-    public void printAllElements(int[] arr) {
+    public String printAllElements(int[] arr) {
         int i = 0;
+        StringBuilder stb = new StringBuilder();
         do {
             if (arr.length == 0) {
-                System.out.print("Вывести элементы в консоль невозможно.");
-                break;
+                return "Вывести элементы в консоль невозможно.";
             } else {
-                System.out.print(arr[i] + " ");
+                stb.append(arr[i]).append(" ");
             }
             i++;
         } while (i < arr.length);
-        System.out.println();
+        return stb.toString();
     }
 
     @Override
-    public void everySecondElement(int[] arr) {
+    public String everySecondElement(int[] arr) {
         int i = 1;
+        StringBuilder stb = new StringBuilder();
         do {
             if (arr.length == 0) {
-                System.out.print("Вывести второй элемент невозможно.");
-                break;
+                return "Вывести второй элемент невозможно.";
             } else if (arr.length == 1) {
-                System.out.print("Массив содержит всего один элемент. Вывести второй элемент невозможно.");
-                break;
+                return "Массив содержит всего один элемент. Вывести второй элемент невозможно.";
             } else {
-                System.out.print(arr[i] + " ");
+                stb.append(arr[i]).append(" ");
             }
             i = i + 2;
         } while (i < arr.length);
-        System.out.println();
+        return stb.toString();
     }
 
     @Override
-    public void reverseAllElements(int[] arr) {
+    public String reverseAllElements(int[] arr) {
+        StringBuilder stb = new StringBuilder();
         if (arr.length == 0) {
-            System.out.print("Вывести элементы массива в обратном порядке невозможно.");
+            return "Вывести элементы массива в обратном порядке невозможно.";
         } else {
             int i = arr.length - 1;
             do {
-                System.out.print(arr[i] + " ");
+                stb.append(arr[i]).append(" ");
                 i--;
             } while (i >= 0);
         }
-        System.out.println();
+        return stb.toString();
     }
 }

@@ -1,69 +1,19 @@
 package home_work_2.arrays;
 
-import home_work_2.utils.ArraysUtils;
-
-import java.util.Arrays;
-import java.util.Scanner;
-
-
 public class Task_2_4 {
-    public static void main(String[] args) {
-        int size = 50;
-        int maxValue = 100;
-        int[]array = ArraysUtils.arrayRandom(size, maxValue);
-        System.out.println("Исходный рабочий массив");
-        System.out.println(Arrays.toString(array));
-
-        int sumEvenPositive = sumOfEvenPositiveArrayElements(array);
-        System.out.print("Сумма четных положительных элементов массива: ");
-        System.out.println(sumEvenPositive);
-
-        int maxElEvenIndex = maxElementWithEvenIndex(array);
-        System.out.print("Максимальный из элементов массива с четными индексами: ");
-        System.out.println(maxElEvenIndex);
-
-        String lessArithmetic = lessArithmeticMean(array);
-        System.out.print("Элементы массива, которые меньше среднего арифметического: ");
-        System.out.println(lessArithmetic);
-
-        String twoMinElements = twoMinArrayElements(array);
-        System.out.print("Два наименьших элемента массива: ");
-        System.out.println(twoMinElements);
-
-        Scanner scanner = new Scanner(System.in);
-        int start;
-        int end;
-        do {
-            System.out.println("Введите начало интервала значений (от 0 до 100 не включительно), которые хотите удалить из массива");
-            start = scanner.nextInt();
-            System.out.println("Введите конец интервала значений (от 0 до 100 не включительно), которые хотите удалить из массива");
-            end = scanner.nextInt();
-
-            if(start > end || start < 0 || end < 0 || start > 100 || end > 100){
-                System.out.println("Неверные границы интервала");
-            }
-        } while (start > end || start < 0 || end < 0 || start > 100 || end > 100);
-
-        int[] compressedArray = arrayCompression(array, start, end);
-        System.out.println("Сжатый массив:");
-        System.out.println(Arrays.toString(compressedArray));
-
-        int[]arrayNew = ArraysUtils.arrayRandom(size, maxValue);
-        System.out.println("Новый рабочий массив");
-        System.out.println(Arrays.toString(arrayNew));
-        int sumDigits = sumAllDigitsInArray(arrayNew);
-        System.out.print("Сумма цифр массива: ");
-        System.out.println(sumDigits);
-
-    }
 
     /**
      * Метод возвращает сумму четных положительных элементов массива
      * @param arr - int-массив
-     * @return - сумма четных положительных элементов
+     * @return - сумма четных положительных элементов или -1, если переданный массив null
      */
     public static int sumOfEvenPositiveArrayElements (int[] arr) {
         int sum = 0;
+
+        if(arr == null) {
+            return -1;
+        }
+
         for (int i = 0; i < arr.length; i++) {
             if(arr[i] % 2 == 0 && arr[i] > 0) {
                 sum = sum + arr[i];
@@ -78,8 +28,9 @@ public class Task_2_4 {
      * @return - int, максимальный из элементов массива с четным индексом
      */
     public static int maxElementWithEvenIndex (int[]arr) {
-        int max = 0;
-        for (int i = 0; i < arr.length; i++) {
+        int max = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
             if(i % 2 == 0 && arr[i] > max) {
                 max = arr[i];
             }
@@ -93,9 +44,17 @@ public class Task_2_4 {
      * @return - строка, содержащая все элементы, значение которых меньше среднего арифметического
      */
     public static String lessArithmeticMean (int[]arr){
+        if (arr == null) {
+            return null;
+        }
+
+        if (arr.length == 0) {
+            return "Массив пуст";
+        }
+
         int arithmeticMean;
         int sumAll = 0;
-        String result = "";
+        StringBuilder stb = new StringBuilder();
 
         for (int a: arr) {
             sumAll = sumAll + a;
@@ -105,11 +64,14 @@ public class Task_2_4 {
 
         for (int a: arr) {
             if(a < arithmeticMean) {
-                result = result + a + " ";
+                stb.append(a).append(" ");
             }
         }
-        return result;
 
+        if(stb.length() == 0) {
+            return "Все элементы массива равны";
+        }
+        return stb.toString();
     }
 
     /**
@@ -118,6 +80,14 @@ public class Task_2_4 {
      * @return - строка, содержащая два наименьших элемента массива
      */
     public static String twoMinArrayElements (int[]arr) {
+        if (arr == null) {
+            return null;
+        }
+
+        if (arr.length == 0) {
+            return "Массив пуст";
+        }
+
         int min;
         int nextMin;
         String result;
@@ -152,13 +122,19 @@ public class Task_2_4 {
      * @return - новый массив, не содержащий элементы, принадлежащие интервалу
      */
     public static int[] arrayCompression (int[]arr, int a, int b) {
+        if (arr == null) {
+            return null;
+        }
+
+        if (arr.length == 0  || a > b) {
+            return arr;
+        }
+
         for (int i = 0; i < arr.length; i++) {
             if(arr[i] >= a && arr[i] <= b){
                 arr[i] = 0;
             }
         }
-
-        //System.out.println(Arrays.toString(arr));
 
         int[] newArr = new int[arr.length];
         for (int i = 0; i < newArr.length; i++) {
@@ -179,12 +155,18 @@ public class Task_2_4 {
      * @return - int, сумма всех цифр массива
      */
     public static int sumAllDigitsInArray(int[]arr) {
+        if(arr == null || arr.length == 0) {
+            return 0;
+        }
+
         int sum = 0;
+        int num;
         for (int a : arr) {
-            while (a!=0) {
-                int rest = a % 10;
+            num = Math.abs(a);
+            while (num!=0) {
+                int rest = num % 10;
                 sum = sum + rest;
-                a = a / 10;
+                num = num / 10;
             }
         }
         return sum;

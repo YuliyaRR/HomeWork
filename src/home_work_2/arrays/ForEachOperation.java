@@ -2,38 +2,41 @@ package home_work_2.arrays;
 
 public class ForEachOperation implements IArraysOperation {
     @Override
-    public void printAllElements(int[] arr) {
+    public String printAllElements(int[] arr) {
+        StringBuilder stb = new StringBuilder();
         if (arr.length == 0) {
-            System.out.print("Вывести элементы в консоль невозможно.");
+            return "Вывести элементы в консоль невозможно.";
         } else {
             for (int a: arr) {
-                System.out.print(a + " ");
+                stb.append(a).append(" ");
             }
         }
-        System.out.println();
+        return stb.toString();
     }
     @Override
-    public void everySecondElement(int[] arr) {
+    public String everySecondElement(int[] arr) {
         int count = 0;
+        StringBuilder stb = new StringBuilder();
         if (arr.length == 0) {
-            System.out.print("Вывести второй элемент невозможно.");
+            return "Вывести второй элемент невозможно.";
         } else if (arr.length == 1) {
-            System.out.print("Массив содержит всего один элемент. Вывести второй элемент невозможно.");
+            return "Массив содержит всего один элемент. Вывести второй элемент невозможно.";
         } else {
             for (int a: arr) {
                 if (count % 2 != 0) {
-                    System.out.print(a + " ");
+                    stb.append(a).append(" ");
                 }
                 count++;
             }
+            return stb.toString();
         }
-        System.out.println();
     }
 
     @Override
-    public void reverseAllElements(int[]arr) {
+    public String reverseAllElements(int[]arr) {
+        StringBuilder stb = new StringBuilder();
         if (arr.length == 0) {
-            System.out.print("Вывести элементы массива в обратном порядке невозможно.");
+            return "Вывести элементы массива в обратном порядке невозможно.";
         } else {
             int [] revers = new int[arr.length];
             int l = 1;
@@ -42,9 +45,9 @@ public class ForEachOperation implements IArraysOperation {
                 l++;
             }
             for (int r: revers) {
-                System.out.print(r + " ");
+                stb.append(r).append(" ");
             }
+            return stb.toString();
         }
-        System.out.println();
     }
 }

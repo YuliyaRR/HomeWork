@@ -2,23 +2,16 @@ package home_work_1;
 
 import java.util.Scanner;
 
-public class Task6p3 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner (System.in);
-        System.out.println("Введите свое имя");
-        String username = scanner.nextLine();
-        scanner.close();
+public class Task6p3 implements ICommunicationPrinter {
 
-        switch (username) {
+    public String welcome(String name) {
+        switch (name) {
             case "Вася":
-                System.out.println("Привет");
-                System.out.println("Я тебя так долго ждал");
-                break;
+                return "Привет \n Я тебя так долго ждал";
             case "Анастасия":
-                System.out.println("Я тебя так долго ждал");
-                break;
+                return "Я тебя так долго ждал";
             default:
-                System.out.println("Добрый день, а вы кто?");
+                return "Добрый день, а вы кто?";
         }
 
     }

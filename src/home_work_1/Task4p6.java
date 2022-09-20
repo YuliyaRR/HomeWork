@@ -9,10 +9,11 @@ public class Task4p6 {
         int year = scanner.nextInt();
         scanner.close();
 
-        if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) {
-            System.out.println("Високосный год");
-        } else {
-            System.out.println("Невисокосный год");
-        }
+        System.out.println(checkLeapYear(year) ? "Високосный год" : "Невисокосный год");
+
+    }
+
+    public static boolean checkLeapYear(int year) {
+        return year % 4 == 0 && (year % 100 != 0 || year % 400 == 0);
     }
 }

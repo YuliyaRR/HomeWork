@@ -2,10 +2,10 @@ package home_work_2.arrays;
 
 interface IArraysOperation {
 
-     void printAllElements(int[]arr);
+     String printAllElements(int[]arr);
 
-     void everySecondElement(int[]arr);
+     String everySecondElement(int[]arr);
 
-     void reverseAllElements(int[]arr);
+     String reverseAllElements(int[]arr);
 
 }

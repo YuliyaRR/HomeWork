@@ -3,15 +3,6 @@ package home_work_1;
 import java.util.Scanner;
 
 public class Task5 {
-
-    public static boolean sleepIn(boolean weekday, boolean vacation) {
-        boolean result = false;
-        if (vacation || !weekday) {
-            result = true;
-        }
-        return result;
-    }
-
     public static void main(String[] args) {
         boolean canISleepYet;
         Scanner scanner = new Scanner(System.in);
@@ -30,4 +21,7 @@ public class Task5 {
         }
     }
 
+    public static boolean sleepIn(boolean weekday, boolean vacation) {
+        return vacation || !weekday;
+    }
 }

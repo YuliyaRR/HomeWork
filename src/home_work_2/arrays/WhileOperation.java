@@ -3,46 +3,49 @@ package home_work_2.arrays;
 public class WhileOperation implements IArraysOperation {
 
     @Override
-    public void printAllElements(int[] arr) {
+    public String printAllElements(int[] arr) {
+        StringBuilder stb = new StringBuilder();
         int k = 0;
         if (arr.length == 0) {
-            System.out.print("Вывести элементы в консоль невозможно.");
+            return "Вывести элементы в консоль невозможно.";
         } else {
             while (k < arr.length) {
-                System.out.print(arr[k] + " ");
+                stb.append(arr[k]).append(" ");
                 k++;
             }
         }
-        System.out.println();
+        return stb.toString();
     }
 
     @Override
-    public void everySecondElement(int[] arr) {
+    public String everySecondElement(int[] arr) {
+        StringBuilder stb = new StringBuilder();
         int k = 1;
         if (arr.length == 0) {
-            System.out.print("Вывести второй элемент невозможно.");
+            return "Вывести второй элемент невозможно.";
         } else if (arr.length == 1) {
-            System.out.print("Массив содержит всего один элемент. Вывести второй элемент невозможно.");
+            return "Массив содержит всего один элемент. Вывести второй элемент невозможно.";
         } else {
             while (k < arr.length) {
-                System.out.print(arr[k] + " ");
+                stb.append(arr[k]).append(" ");
                 k = k + 2;
             }
         }
-        System.out.println();
+        return stb.toString();
     }
 
     @Override
-    public void reverseAllElements(int[]arr) {
+    public String reverseAllElements(int[]arr) {
+        StringBuilder stb = new StringBuilder();
         if (arr.length == 0) {
-            System.out.print("Вывести элементы массива в обратном порядке невозможно.");
+            return "Вывести элементы массива в обратном порядке невозможно.";
         } else {
             int k = arr.length - 1;
             while (k >= 0) {
-                System.out.print(arr[k] + " ");
+                stb.append(arr[k]).append(" ");
                 k--;
             }
         }
-        System.out.println();
+        return stb.toString();
     }
 }

@@ -1,14 +1,16 @@
 package home_work_2.utils;
 
-import java.util.Arrays;
-
 public class SortsUtils {
 
     /**
      * Метод сортирует переданный ему массив при помощи алгоритма пузырьковая сортировка
      * @param arr - int-массив
      */
-    public static void bubble(int[] arr){
+    public static int[] bubble(int[] arr){
+        if(arr == null) {
+            return null;
+        }
+
         for (int i = 0; i < arr.length-1; i++) {
             for (int j = 0; j < arr.length-1-i; j++) {
                 if(arr[j] > arr[j+1]){
@@ -18,13 +20,18 @@ public class SortsUtils {
                 }
             }
         }
+        return arr;
     }
 
     /**
      * Метод сортирует переданный ему массив при помощи алгоритма шейкерная сортировка
      * @param arr - int-массив
      */
-    public static void shake(int[] arr) {
+    public static int[] shake(int[] arr) {
+        if(arr == null) {
+            return null;
+        }
+
         int start = 0;
         int end = arr.length - 1;
         boolean doSort = true;// индикатор сортировки
@@ -52,5 +59,7 @@ public class SortsUtils {
             }
             start++;
         }
+        return arr;
     }
+
 }
