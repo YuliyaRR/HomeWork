@@ -29,17 +29,10 @@ public class Task_1_5 {
      * @return - вероятность выпадения четных чисел в %.
      */
     public static double probabilityOfEvenNumbers (int minBound, int maxBound) {
-        double countEvenNumber = 0;
-        double resultOfProbability;
-        Random random = new Random();
-        for (int i = 0; i < 1000 ; i++) {
-            int randomNum = random.nextInt(maxBound - minBound) + minBound;
-            if (randomNum % 2 == 0) {
-                countEvenNumber++;
-            }
-        }
-        resultOfProbability = countEvenNumber / 1000 * 100;
-        return resultOfProbability;
+
+        int[] arr = randomArray(1000, minBound, maxBound);
+
+        return probabilityOfEvenNumbers(arr);
     }
 
     /**

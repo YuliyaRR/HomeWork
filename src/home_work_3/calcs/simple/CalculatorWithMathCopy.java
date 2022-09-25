@@ -8,9 +8,13 @@ public class CalculatorWithMathCopy implements ICalculator {
      * Метод производит деление двух чисел
      * @param a - делимое (double)
      * @param b - делитель (double)
+     * @throws ArithmeticException - если b = 0;
      * @return - частное (double) - результат деления
      */
     public double divide (double a, double b) {
+        if (b == 0) {
+            throw new ArithmeticException("На ноль делить нельзя");
+        }
         return a / b;
     }
 

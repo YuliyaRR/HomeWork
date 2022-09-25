@@ -13,6 +13,13 @@ public class CalculatorWithCounterAutoChoiceAgregation {
     private long countOperation;
 
     /**
+     * Метод-счетчик использования калькуляторв
+     */
+    public void incrementCountOperation() {
+        countOperation++;
+    }
+
+    /**
      * Метод-геттер для получения результата работы счетчика использования калькулятора
      * @return long - количество вызовов калькулятора
      */
@@ -41,7 +48,7 @@ public class CalculatorWithCounterAutoChoiceAgregation {
      * @return - частное (double) - результат деления
      */
     public double divide (double a, double b) {
-        countOperation++;
+        incrementCountOperation();
         if(calcOperator != null) {
             return calcOperator.divide(a,b);
         } else if (calcMathCopy != null) {
@@ -61,7 +68,7 @@ public class CalculatorWithCounterAutoChoiceAgregation {
      * @return - произведение (double) - результат умножения
      */
     public double multiply (double a, double b) {
-        countOperation++;
+        incrementCountOperation();
         if(calcOperator != null) {
             return calcOperator.multiply(a,b);
         } else if (calcMathCopy != null) {
@@ -80,7 +87,7 @@ public class CalculatorWithCounterAutoChoiceAgregation {
      * @return - разность двух чисел (double)
      */
     public double minus(double a, double b) {
-        countOperation++;
+        incrementCountOperation();
         if(calcOperator != null) {
             return calcOperator.minus(a,b);
         } else if (calcMathCopy != null) {
@@ -99,7 +106,7 @@ public class CalculatorWithCounterAutoChoiceAgregation {
      * @return - сумма двух чисел (double)
      */
     public double sum (double a, double b) {
-        countOperation++;
+        incrementCountOperation();
         if(calcOperator != null) {
             return calcOperator.sum(a,b);
         } else if (calcMathCopy != null) {
@@ -118,7 +125,7 @@ public class CalculatorWithCounterAutoChoiceAgregation {
      * @return - double (a в степени b)
      */
     public double degree(double a, int b) {
-        countOperation++;
+        incrementCountOperation();
         if(calcOperator != null) {
             return calcOperator.degree(a,b);
         } else if (calcMathCopy != null) {
@@ -135,7 +142,7 @@ public class CalculatorWithCounterAutoChoiceAgregation {
      * @return - значение числа по модулю (double)
      */
     public double module(double a) {
-        countOperation++;
+        incrementCountOperation();
         if(calcOperator != null) {
             return calcOperator.module(a);
         } else if (calcMathCopy != null) {
@@ -153,7 +160,7 @@ public class CalculatorWithCounterAutoChoiceAgregation {
      * @return - квадратный корень из числа (double)
      */
     public double squareRoot (double a){
-        countOperation++;
+        incrementCountOperation();
         if(calcOperator != null) {
             return calcOperator.squareRoot(a);
         } else if (calcMathCopy != null) {

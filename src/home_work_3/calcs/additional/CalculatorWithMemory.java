@@ -14,6 +14,13 @@ public class CalculatorWithMemory {
     }
 
     /**
+     * Метод-счетчик использования калькуляторв
+     */
+    public void incrementCountOperation() {
+        countOperation++;
+    }
+
+    /**
      * Метод-геттер для получения результата работы счетчика использования калькулятора
      * @return long - количество вызовов калькулятора
      */
@@ -27,7 +34,7 @@ public class CalculatorWithMemory {
      * @return double последнее значение из памяти
      */
     public double getMemory() {
-        countOperation++;
+        incrementCountOperation();
         double fromMemory = inMemory;
         inMemory = 0;
         currentResult = 0;
@@ -39,9 +46,8 @@ public class CalculatorWithMemory {
      * Функционал дополнен автоматически увеличивающимся счетчиком использования калькулятора.
      */
     public void saveInMemory() {
-        countOperation++;
+        incrementCountOperation();
         inMemory = currentResult;
-
     }
 
     /**
@@ -54,7 +60,7 @@ public class CalculatorWithMemory {
      * @return - частное (double) - результат деления
      */
     public double divide(double a, double b) {
-        countOperation++;
+        incrementCountOperation();
         return currentResult = iCalculator.divide(a, b);
     }
 
@@ -68,7 +74,7 @@ public class CalculatorWithMemory {
      * @return - произведение (double) - результат умножения
      */
     public double multiply (double a, double b) {
-        countOperation++;
+        incrementCountOperation();
         return currentResult = iCalculator.multiply(a, b);
     }
 
@@ -82,7 +88,7 @@ public class CalculatorWithMemory {
      * @return - разность двух чисел (double)
      */
     public double minus(double a, double b) {
-        countOperation++;
+        incrementCountOperation();
         return currentResult = iCalculator.minus(a, b);
     }
 
@@ -96,7 +102,7 @@ public class CalculatorWithMemory {
      * @return - сумма двух чисел (double)
      */
     public double sum (double a, double b) {
-        countOperation++;
+        incrementCountOperation();
         return currentResult = iCalculator.sum(a, b);
     }
 
@@ -110,7 +116,7 @@ public class CalculatorWithMemory {
      * @return - double (a в степени b)
      */
     public double degree(double a, int b) {
-        countOperation++;
+        incrementCountOperation();
         return currentResult = iCalculator.degree(a, b);
     }
 
@@ -123,7 +129,7 @@ public class CalculatorWithMemory {
      * @return - значение числа по модулю (double)
      */
     public double module(double a) {
-        countOperation++;
+        incrementCountOperation();
         return currentResult = iCalculator.module(a);
     }
 
@@ -136,7 +142,7 @@ public class CalculatorWithMemory {
      * @return - квадратный корень из числа (double)
      */
     public double squareRoot (double a) {
-        countOperation++;
+        incrementCountOperation();
         return currentResult = iCalculator.squareRoot(a);
     }
 

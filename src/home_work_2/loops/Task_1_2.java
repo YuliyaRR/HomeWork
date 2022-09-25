@@ -5,34 +5,33 @@ public class Task_1_2 {
     /**
      * Метод проверяет корректность введенных пользователем данных (содержит ли строка только целые числа)
      * @param userNum - данные, введенные пользователем;
-     * @return 0 - данные корректны;
-     *         -1 - данные некорректны (пользователь ввел дробное число);
-     *         -2 - данные некорректны (пользователь ввел букву либо иной символ).
+     * Throws:IllegalArgumentException - если введено не число
+     * @return  - true, если данные корректны.
+     * В случае некоректности данных метод выбрасывает исключение
      */
-    public static int dataValidation(String userNum) {
+
+     public static boolean dataValidation(String userNum) {
         char[]arr = userNum.toCharArray();
-        int result = 0;
+        boolean result = false;
         int countSpot = 0;
 
         for (char a: arr) {
             if (a == '.') {
                 countSpot++;
                 if (countSpot > 1) {
-                    result = -2;
-                    break;
+                    throw new IllegalArgumentException("Введено не число");
                 }
             } else if (Character.isLetter(a)) {
-                result = -2;
-                break;
+                throw new IllegalArgumentException("Введено не число");
             } else if (Character.isDigit(a)){
-                result = 0;
+                result = true;
             } else {
-                result = -2;
+                throw new IllegalArgumentException("Введено не число");
             }
         }
 
         if (countSpot == 1) {
-            result = -1;
+            throw new IllegalArgumentException("Введено дробное число");
         }
 
         return result;

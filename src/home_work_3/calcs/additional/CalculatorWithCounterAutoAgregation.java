@@ -8,6 +8,13 @@ public class CalculatorWithCounterAutoAgregation {
     private long countOperation;
 
     /**
+     * Метод-счетчик использования калькуляторв
+     */
+    public void incrementCountOperation() {
+        countOperation++;
+    }
+
+    /**
      * Метод-геттер для получения результата работы счетчика использования калькулятора
      * @return long - количество вызовов калькулятора
      */
@@ -27,7 +34,7 @@ public class CalculatorWithCounterAutoAgregation {
      * @return - частное (double) - результат деления
      */
     public double divide (double a, double b) {
-        countOperation++;
+        incrementCountOperation();
         return calc.divide(a,b);
     }
     /**
@@ -38,7 +45,7 @@ public class CalculatorWithCounterAutoAgregation {
      * @return - произведение (double) - результат умножения
      */
     public double multiply (double a, double b) {
-        countOperation++;
+        incrementCountOperation();
         return calc.multiply(a,b);
     }
     /**
@@ -49,7 +56,7 @@ public class CalculatorWithCounterAutoAgregation {
      * @return - разность двух чисел (double)
      */
     public double minus(double a, double b) {
-        countOperation++;
+        incrementCountOperation();
         return calc.minus(a,b);
     }
 
@@ -61,7 +68,7 @@ public class CalculatorWithCounterAutoAgregation {
      * @return - сумма двух чисел (double)
      */
     public double sum (double a, double b) {
-        countOperation++;
+        incrementCountOperation();
         return calc.sum(a,b);
     }
     /**
@@ -72,7 +79,7 @@ public class CalculatorWithCounterAutoAgregation {
      * @return - double (a в степени b)
      */
     public double degree(double a, int b) {
-        countOperation++;
+        incrementCountOperation();
         return calc.degree(a,b);
     }
 
@@ -83,7 +90,7 @@ public class CalculatorWithCounterAutoAgregation {
      * @return - значение числа по модулю (double)
      */
     public double module(double a) {
-        countOperation++;
+        incrementCountOperation();
         return calc.module(a);
     }
 
@@ -94,7 +101,7 @@ public class CalculatorWithCounterAutoAgregation {
      * @return - квадратный корень из числа (double)
      */
     public double squareRoot (double a) {
-        countOperation++;
+        incrementCountOperation();
         return calc.squareRoot(a);
     }
 

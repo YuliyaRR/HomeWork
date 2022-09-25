@@ -5,13 +5,14 @@ public class Task_2_4 {
     /**
      * Метод возвращает сумму четных положительных элементов массива
      * @param arr - int-массив
-     * @return - сумма четных положительных элементов или -1, если переданный массив null
+     * Throws:NullPointerException - если переданный массив равен null
+     * @return - сумма четных положительных элементов
      */
     public static int sumOfEvenPositiveArrayElements (int[] arr) {
         int sum = 0;
 
         if(arr == null) {
-            return -1;
+            throw new NullPointerException("Переданный массив равен null");
         }
 
         for (int i = 0; i < arr.length; i++) {
@@ -155,8 +156,12 @@ public class Task_2_4 {
      * @return - int, сумма всех цифр массива
      */
     public static int sumAllDigitsInArray(int[]arr) {
-        if(arr == null || arr.length == 0) {
-            return 0;
+        if(arr == null) {
+            throw new NullPointerException("Переданный массив равен null");
+        }
+
+        if(arr.length == 0) {
+            throw new ArrayIndexOutOfBoundsException("Переданный массив имеет нулевую длину");
         }
 
         int sum = 0;

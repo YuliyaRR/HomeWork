@@ -9,7 +9,7 @@ public class Task4p4 {
         double number;
         boolean checkNumber;
         String choice;
-        int resultCheckSymbol;
+
         Scanner scanner = new Scanner(System.in);
         do {
             System.out.println("Введите положительное число");
@@ -20,39 +20,39 @@ public class Task4p4 {
             }
         } while (!checkNumber);
 
-        do {
+
             System.out.println("Хотите перевести его в байты (b) или килобайты (k)?");
             choice = scanner.next();
-            resultCheckSymbol = checkInputSymbol(choice);
-            if (resultCheckSymbol == 0) {
-                System.out.println("Вы ввели неверный символ");
-            }
-        } while (resultCheckSymbol == 0);
 
-        switch (resultCheckSymbol) {
-            case 1:
-                result = convertBytesToKilobytes(number);
-                System.out.printf("%.02f байт = %.02f кб", number, result);
-                break;
-            case 2:
-                result = convertKilobytesToBytes(number);
-                System.out.printf("%.02f кб = %.02f байт", number, result);
-                break;
-        }
+            try {
+                String resultCheck = checkInputSymbol(choice);
+                if (resultCheck.equals("k")) {
+                    result = convertBytesToKilobytes(number);
+                    System.out.printf("%.02f байт = %.02f кб\n", number, result);
+                } else {
+                    result = convertKilobytesToBytes(number);
+                    System.out.printf("%.02f кб = %.02f байт\n", number, result);
+                }
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
+
+        System.out.println("Работа завершена");
 
     }
 
     public static boolean checkInputNumber(double userNumber) {
+
         return !(userNumber < 0);
     }
 
-    public static int checkInputSymbol(String userSymbol) {
+    public static String checkInputSymbol(String userSymbol) {
         if (Objects.equals(userSymbol,"k") || Objects.equals(userSymbol,"K")) {
-            return 1;
+            return "k";
         } else if (Objects.equals(userSymbol,"b") || Objects.equals(userSymbol,"B")) {
-            return 2;
+            return "b";
         } else {
-            return 0;
+            throw new IllegalArgumentException("Вы ввели неверный символ");
         }
     }
 

@@ -7,6 +7,13 @@ public class CalculatorWithCounterAutoSuper extends CalculatorWithMathExtends {
     private long countOperation;
 
     /**
+     * Метод-счетчик использования калькуляторв
+     */
+    public void incrementCountOperation() {
+        countOperation++;
+    }
+
+    /**
      * Метод-геттер для получения результата работы счетчика использования калькулятора
      * @return long - количество вызовов калькулятора
      */
@@ -21,7 +28,7 @@ public class CalculatorWithCounterAutoSuper extends CalculatorWithMathExtends {
     */
     @Override
     public double degree(double a, int b) {
-        countOperation++;
+        incrementCountOperation();
         return super.degree(a, b);
     }
 
@@ -32,7 +39,7 @@ public class CalculatorWithCounterAutoSuper extends CalculatorWithMathExtends {
      */
     @Override
     public double module(double a) {
-        countOperation++;
+        incrementCountOperation();
         return super.module(a);
     }
     /**
@@ -42,7 +49,7 @@ public class CalculatorWithCounterAutoSuper extends CalculatorWithMathExtends {
      */
     @Override
     public double squareRoot(double a) {
-        countOperation++;
+        incrementCountOperation();
         return super.squareRoot(a);
     }
 
@@ -53,7 +60,7 @@ public class CalculatorWithCounterAutoSuper extends CalculatorWithMathExtends {
      */
     @Override
     public double divide(double a, double b) {
-        countOperation++;
+        incrementCountOperation();
         return super.divide(a, b);
     }
 
@@ -64,7 +71,7 @@ public class CalculatorWithCounterAutoSuper extends CalculatorWithMathExtends {
      */
     @Override
     public double multiply(double a, double b) {
-        countOperation++;
+        incrementCountOperation();
         return super.multiply(a, b);
     }
 
@@ -75,7 +82,7 @@ public class CalculatorWithCounterAutoSuper extends CalculatorWithMathExtends {
      */
     @Override
     public double minus(double a, double b) {
-        countOperation++;
+        incrementCountOperation();
         return super.minus(a, b);
     }
 
@@ -86,7 +93,7 @@ public class CalculatorWithCounterAutoSuper extends CalculatorWithMathExtends {
      */
     @Override
     public double sum(double a, double b) {
-        countOperation++;
+        incrementCountOperation();
         return super.sum(a, b);
     }
 }

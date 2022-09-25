@@ -8,6 +8,13 @@ public class CalculatorWithCounterAutoComposite {
     private long countOperation;
 
     /**
+     * Метод-счетчик использования калькуляторв
+     */
+    public void incrementCountOperation() {
+        countOperation++;
+    }
+
+    /**
      * Метод-геттер для получения результата работы счетчика использования калькулятора
      * @return long - количество вызовов калькулятора
      */
@@ -24,7 +31,7 @@ public class CalculatorWithCounterAutoComposite {
      * @return - произведение (double) - результат умножения
      */
     public double multiply(double a, double b) {
-        countOperation++;
+        incrementCountOperation();
         return calculator.multiply(a, b);
     }
 
@@ -37,7 +44,7 @@ public class CalculatorWithCounterAutoComposite {
      * @return - частное (double) - результат деления
      */
     public double divide (double a, double b) {
-        countOperation++;
+        incrementCountOperation();
         return calculator.divide(a,b);
     }
 
@@ -50,7 +57,7 @@ public class CalculatorWithCounterAutoComposite {
      * @return - разность двух чисел (double)
      */
     public double minus(double a, double b) {
-        countOperation++;
+        incrementCountOperation();
         return calculator.minus(a,b);
     }
 
@@ -63,7 +70,7 @@ public class CalculatorWithCounterAutoComposite {
      * @return - сумма двух чисел (double)
      */
     public double sum (double a, double b) {
-        countOperation++;
+        incrementCountOperation();
         return calculator.sum(a, b);
     }
     /**
@@ -75,7 +82,7 @@ public class CalculatorWithCounterAutoComposite {
      * @return - double (a в степени b)
      */
     public double degree(double a, int b) {
-        countOperation++;
+        incrementCountOperation();
         return calculator.degree(a,b);
     }
 
@@ -87,7 +94,7 @@ public class CalculatorWithCounterAutoComposite {
      * @return - значение числа по модулю (double)
      */
     public double module(double a) {
-        countOperation++;
+        incrementCountOperation();
         return calculator.module(a);
     }
 
@@ -99,7 +106,7 @@ public class CalculatorWithCounterAutoComposite {
      * @return - квадратный корень из числа (double)
      */
     public double squareRoot (double a) {
-        countOperation++;
+        incrementCountOperation();
         return calculator.squareRoot(a);
     }
 

@@ -6,9 +6,9 @@ public class SortsUtils {
      * Метод сортирует переданный ему массив при помощи алгоритма пузырьковая сортировка
      * @param arr - int-массив
      */
-    public static int[] bubble(int[] arr){
+    public static void bubble(int[] arr){
         if(arr == null) {
-            return null;
+            throw new NullPointerException("Переданный массив равен null");
         }
 
         for (int i = 0; i < arr.length-1; i++) {
@@ -20,16 +20,16 @@ public class SortsUtils {
                 }
             }
         }
-        return arr;
+
     }
 
     /**
      * Метод сортирует переданный ему массив при помощи алгоритма шейкерная сортировка
      * @param arr - int-массив
      */
-    public static int[] shake(int[] arr) {
+    public static void shake(int[] arr) {
         if(arr == null) {
-            return null;
+            throw new NullPointerException("Переданный массив равен null");
         }
 
         int start = 0;
@@ -59,7 +59,7 @@ public class SortsUtils {
             }
             start++;
         }
-        return arr;
+
     }
 
 }
