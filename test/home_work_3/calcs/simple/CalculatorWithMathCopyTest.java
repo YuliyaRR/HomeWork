@@ -36,6 +36,14 @@ public class CalculatorWithMathCopyTest {
     }
 
     @Test
+    public void divide6() {
+        ICalculator calc = new CalculatorWithOperator();
+        Throwable throwable = Assertions.assertThrows (ArithmeticException.class,
+                () -> calc.divide(28,0));
+        Assertions.assertEquals("На ноль делить нельзя", throwable.getMessage());
+    }
+
+    @Test
     public void multiply() {
         ICalculator calc = new CalculatorWithMathCopy();
         Assertions.assertEquals(12, calc.multiply(6,2));

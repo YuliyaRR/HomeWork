@@ -3,6 +3,9 @@ package home_work_2.arrays;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 public class Task_2_4Test {
 
     @Test
@@ -26,7 +29,9 @@ public class Task_2_4Test {
     @Test
     public void sumOfEvenPositiveArrayElements4(){
         int[]arr = null;
-        Assertions.assertEquals(-1, Task_2_4.sumOfEvenPositiveArrayElements(arr));
+        Throwable thrown = assertThrows(NullPointerException.class,
+                () -> Task_2_4.sumOfEvenPositiveArrayElements(arr));
+        assertEquals("Переданный массив равен null", thrown.getMessage());
     }
 
     @Test
@@ -153,13 +158,17 @@ public class Task_2_4Test {
     @Test
     public void sumAllDigitsInArray3(){
         int[] arr = null;
-        Assertions.assertEquals(0, Task_2_4.sumAllDigitsInArray(arr));
+        Throwable thrown = assertThrows(NullPointerException.class,
+                () -> Task_2_4.sumAllDigitsInArray(arr));
+        assertEquals("Переданный массив равен null", thrown.getMessage());
     }
 
     @Test
     public void sumAllDigitsInArray4(){
         int[] arr = {};
-        Assertions.assertEquals(0, Task_2_4.sumAllDigitsInArray(arr));
+        Throwable thrown = assertThrows(ArrayIndexOutOfBoundsException.class,
+                () -> Task_2_4.sumAllDigitsInArray(arr));
+        Assertions.assertEquals("Переданный массив имеет нулевую длину", thrown.getMessage());
     }
 
     @Test

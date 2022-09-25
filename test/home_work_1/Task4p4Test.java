@@ -3,6 +3,9 @@ package home_work_1;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 public class Task4p4Test {
     @Test
     public void checkInputNumber() {
@@ -21,37 +24,43 @@ public class Task4p4Test {
 
     @Test
     public void checkInputSymbol() {
-        Assertions.assertEquals(1, Task4p4.checkInputSymbol("k"));
+        Assertions.assertEquals("k", Task4p4.checkInputSymbol("k"));
     }
 
     @Test
     public void checkInputSymbol2() {
-        Assertions.assertEquals(2, Task4p4.checkInputSymbol("b"));
+        Assertions.assertEquals("b", Task4p4.checkInputSymbol("b"));
     }
 
     @Test
     public void checkInputSymbol3() {
-        Assertions.assertEquals(1, Task4p4.checkInputSymbol("K"));
+        Assertions.assertEquals("k", Task4p4.checkInputSymbol("K"));
     }
 
     @Test
     public void checkInputSymbol4() {
-        Assertions.assertEquals(2, Task4p4.checkInputSymbol("B"));
+        Assertions.assertEquals("b", Task4p4.checkInputSymbol("B"));
     }
 
     @Test
-    public void checkInputSymbol5() {
-        Assertions.assertEquals(0, Task4p4.checkInputSymbol(""));
+    public void checkInputSymbol5() throws IllegalArgumentException {
+        Throwable thrown = assertThrows(IllegalArgumentException.class,
+                () -> Task4p4.checkInputSymbol(""));
+        assertNotNull(thrown.getMessage());
     }
 
     @Test
-    public void checkInputSymbol6() {
-        Assertions.assertEquals(0, Task4p4.checkInputSymbol("-"));
-    }
+    public void checkInputSymbol6() throws IllegalArgumentException {
+        Throwable thrown = assertThrows(IllegalArgumentException.class,
+                () -> Task4p4.checkInputSymbol("-"));
+        assertNotNull(thrown.getMessage());
+        }
 
     @Test
-    public void checkInputSymbol7() {
-        Assertions.assertEquals(0, Task4p4.checkInputSymbol("l"));
+    public void checkInputSymbol7() throws IllegalArgumentException {
+        Throwable thrown = assertThrows(IllegalArgumentException.class,
+                () -> Task4p4.checkInputSymbol("l"));
+        assertNotNull(thrown.getMessage());
     }
 
     @Test

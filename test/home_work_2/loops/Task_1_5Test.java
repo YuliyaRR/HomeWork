@@ -50,21 +50,6 @@ public class Task_1_5Test {
     }
 
     @Test
-    public void randomArray3() {
-        int minBound = 4;
-        int maxBound = 18;
-        int[]arr = {4,5,11,17,18,3,2,0,10,12};
-        boolean result = true;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] < minBound || arr[i] >= maxBound) {
-                result = false;
-                break;
-            }
-        }
-        Assertions.assertFalse(result);
-    }
-
-    @Test
     public void numberOfEvenAndOddDigits(){
         Assertions.assertEquals("четных цифр - 2, нечетных цифр - 2",
                 Task_1_5.numberOfEvenAndOddDigits(1245));

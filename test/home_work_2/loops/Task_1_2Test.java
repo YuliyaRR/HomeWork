@@ -1,32 +1,41 @@
 package home_work_2.loops;
 
+import home_work_1.Task4p4;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 public class Task_1_2Test {
     @Test
-    public void dataValidation() {
-        Assertions.assertEquals(-1, Task_1_2.dataValidation("12.3"));
+    public void dataValidation() throws IllegalArgumentException {
+        Throwable thrown = assertThrows(IllegalArgumentException.class,
+                () -> Task_1_2.dataValidation("1.2.3"));
+        assertEquals("Введено не число", thrown.getMessage());
     }
 
     @Test
-    public void dataValidation2() {
-        Assertions.assertEquals(-2, Task_1_2.dataValidation("1.2.3"));
+    public void dataValidation2() throws IllegalArgumentException {
+            Throwable thrown = assertThrows(IllegalArgumentException.class,
+                    () -> Task_1_2.dataValidation("12.3"));
+            assertEquals("Введено дробное число", thrown.getMessage());
     }
 
     @Test
-    public void dataValidation3() {
-        Assertions.assertEquals(-2, Task_1_2.dataValidation("hello123"));
+    public void dataValidation3() throws IllegalArgumentException {
+        Throwable thrown = assertThrows(IllegalArgumentException.class,
+                () -> Task_1_2.dataValidation("hello123"));
+        assertEquals("Введено не число", thrown.getMessage());
     }
 
     @Test
     public void dataValidation4() {
-        Assertions.assertEquals(0, Task_1_2.dataValidation("123"));
+        Assertions.assertTrue(Task_1_2.dataValidation("123"));
     }
 
     @Test
     public void dataValidation5() {
-        Assertions.assertEquals(0, Task_1_2.dataValidation("0"));
+        Assertions.assertTrue(Task_1_2.dataValidation("0"));
     }
 
     @Test

@@ -6,6 +6,32 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class CalculatorWithCounterAutoDecoratorTest {
+
+    @Test
+    public void incrementCountOperation() {
+        CalculatorWithCounterAutoDecorator calc = new CalculatorWithCounterAutoDecorator
+                (new CalculatorWithMemoryDecorator(new CalculatorWithMathExtends()));
+        Assertions.assertEquals(0, calc.getCountOperation() );
+    }
+
+    @Test
+    public void incrementCountOperation2() {
+        CalculatorWithCounterAutoDecorator calc = new CalculatorWithCounterAutoDecorator
+                (new CalculatorWithMemoryDecorator(new CalculatorWithMathExtends()));
+        calc.incrementCountOperation();
+        Assertions.assertEquals(1, calc.getCountOperation());
+    }
+
+    @Test
+    public void incrementCountOperation3() {
+        CalculatorWithCounterAutoDecorator calc = new CalculatorWithCounterAutoDecorator
+                (new CalculatorWithMemoryDecorator(new CalculatorWithMathExtends()));
+        calc.incrementCountOperation();
+        calc.incrementCountOperation();
+        calc.incrementCountOperation();
+        calc.incrementCountOperation();
+        Assertions.assertEquals(4, calc.getCountOperation() );
+    }
     @Test
     public void divide() {
         ICalculator calc = new CalculatorWithCounterAutoDecorator
@@ -39,6 +65,23 @@ public class CalculatorWithCounterAutoDecoratorTest {
         ICalculator calc = new CalculatorWithCounterAutoDecorator
                 (new CalculatorWithMemoryDecorator(new CalculatorWithMathExtends()));
         Assertions.assertEquals(5.6, calc.divide(28,5));
+    }
+
+    @Test
+    public void divide6() {
+        ICalculator calc = new CalculatorWithCounterAutoDecorator
+                (new CalculatorWithMemoryDecorator(new CalculatorWithMathExtends()));
+        Throwable throwable = Assertions.assertThrows (ArithmeticException.class,
+                () -> calc.divide(28,0));
+        Assertions.assertEquals("На ноль делить нельзя", throwable.getMessage());
+    }
+
+    @Test
+    public void incrementCountOperation4() {
+        CalculatorWithCounterAutoDecorator calc = new CalculatorWithCounterAutoDecorator
+                (new CalculatorWithMemoryDecorator(new CalculatorWithMathExtends()));
+        calc.divide(6,2);
+        Assertions.assertEquals(1, calc.getCountOperation());
     }
 
     @Test
@@ -77,6 +120,14 @@ public class CalculatorWithCounterAutoDecoratorTest {
     }
 
     @Test
+    public void incrementCountOperation5() {
+        CalculatorWithCounterAutoDecorator calc = new CalculatorWithCounterAutoDecorator
+                (new CalculatorWithMemoryDecorator(new CalculatorWithMathExtends()));;
+        calc.multiply(15,7);
+        Assertions.assertEquals(1, calc.getCountOperation());
+    }
+
+    @Test
     public void minus() {
         ICalculator calc = new CalculatorWithCounterAutoDecorator
                 (new CalculatorWithMemoryDecorator(new CalculatorWithMathExtends()));
@@ -109,6 +160,14 @@ public class CalculatorWithCounterAutoDecoratorTest {
         ICalculator calc = new CalculatorWithCounterAutoDecorator
                 (new CalculatorWithMemoryDecorator(new CalculatorWithMathExtends()));
         Assertions.assertEquals(0, calc.minus(2,2));
+    }
+
+    @Test
+    public void incrementCountOperation6() {
+        CalculatorWithCounterAutoDecorator calc = new CalculatorWithCounterAutoDecorator
+                (new CalculatorWithMemoryDecorator(new CalculatorWithMathExtends()));
+        calc.minus(2,2);
+        Assertions.assertEquals(1, calc.getCountOperation());
     }
 
     @Test
@@ -154,6 +213,14 @@ public class CalculatorWithCounterAutoDecoratorTest {
     }
 
     @Test
+    public void incrementCountOperation7() {
+        CalculatorWithCounterAutoDecorator calc = new CalculatorWithCounterAutoDecorator
+                (new CalculatorWithMemoryDecorator(new CalculatorWithMathExtends()));;
+        calc.sum(3,0);
+        Assertions.assertEquals(1, calc.getCountOperation());
+    }
+
+    @Test
     public void degree() {
         ICalculator calc = new CalculatorWithCounterAutoDecorator
                 (new CalculatorWithMemoryDecorator(new CalculatorWithMathExtends()));
@@ -189,6 +256,14 @@ public class CalculatorWithCounterAutoDecoratorTest {
     }
 
     @Test
+    public void incrementCountOperation8() {
+        CalculatorWithCounterAutoDecorator calc = new CalculatorWithCounterAutoDecorator
+                (new CalculatorWithMemoryDecorator(new CalculatorWithMathExtends()));
+        calc.degree(-3,3);
+        Assertions.assertEquals(1, calc.getCountOperation());
+    }
+
+    @Test
     public void module() {
         ICalculator calc = new CalculatorWithCounterAutoDecorator
                 (new CalculatorWithMemoryDecorator(new CalculatorWithMathExtends()));
@@ -200,6 +275,14 @@ public class CalculatorWithCounterAutoDecoratorTest {
         ICalculator calc = new CalculatorWithCounterAutoDecorator
                 (new CalculatorWithMemoryDecorator(new CalculatorWithMathExtends()));
         Assertions.assertEquals(3, calc.module(3));
+    }
+
+    @Test
+    public void incrementCountOperation9() {
+        CalculatorWithCounterAutoDecorator calc = new CalculatorWithCounterAutoDecorator
+                (new CalculatorWithMemoryDecorator(new CalculatorWithMathExtends()));
+        calc.module(3);
+        Assertions.assertEquals(1, calc.getCountOperation());
     }
 
     @Test
@@ -221,5 +304,27 @@ public class CalculatorWithCounterAutoDecoratorTest {
         ICalculator calc = new CalculatorWithCounterAutoDecorator
                 (new CalculatorWithMemoryDecorator(new CalculatorWithMathExtends()));
         Assertions.assertEquals(0.5,calc.squareRoot(0.25));
+    }
+
+    @Test
+    public void incrementCountOperation10() {
+        CalculatorWithCounterAutoDecorator calc = new CalculatorWithCounterAutoDecorator
+                (new CalculatorWithMemoryDecorator(new CalculatorWithMathExtends()));
+        calc.squareRoot(9);
+        Assertions.assertEquals(1, calc.getCountOperation());
+    }
+
+    @Test
+    public void incrementCountOperation11() {
+        CalculatorWithCounterAutoDecorator calc = new CalculatorWithCounterAutoDecorator
+                (new CalculatorWithMemoryDecorator(new CalculatorWithMathExtends()));
+        calc.minus(2,1);
+        calc.multiply(6,3);
+        calc.module(-6);
+        calc.squareRoot(36);
+        calc.sum(36, 11);
+        calc.divide(25,5);
+        calc.degree(5,2);
+        Assertions.assertEquals(7, calc.getCountOperation() );
     }
 }
