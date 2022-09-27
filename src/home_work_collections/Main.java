@@ -1,6 +1,5 @@
 package home_work_collections;
 
-
 import home_work_collections.comparator.AgeAnimalAndNickComparator;
 import home_work_collections.comparator.AgeAnimalComparator;
 import home_work_collections.comparator.LengthPasswordAndNickComparator;
@@ -15,19 +14,15 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        //Свой метод сортировки на большом количестве элементов застревает, на 1000 работает быстро,
-        // поэтому для сопоставимости данных, сортировка запущена на 1000 эл.
-        // После коллекция очищается и далее запускается с 100_000 эл, но без сортировки
-
         System.out.println("LinkedList<Person>");
         List<Person> listLinkedList = new LinkedList<>();
         Time timeLLP = new Time();
 
-        addToCollectionPerson(listLinkedList, 1_000, timeLLP);
+        addToCollectionPerson(listLinkedList, 100_000, timeLLP);
         iterationIterator(listLinkedList, timeLLP);
         sortJDK(listLinkedList, new LengthPasswordAndNickComparator(), timeLLP);
         iterationForEach(listLinkedList, timeLLP);
-        sortCollectionPerson(listLinkedList, new LengthPasswordComparator(), timeLLP);
+        sortMergePerson(listLinkedList, new LengthPasswordComparator(), timeLLP);
         deleteJDK(listLinkedList,timeLLP);
 
         allWorkPerson(listLinkedList,timeLLP);
@@ -37,11 +32,11 @@ public class Main {
         List<Person> listArrayList = new ArrayList<>();
         Time timeLAL = new Time();
 
-        addToCollectionPerson(listArrayList, 1000, timeLAL);
+        addToCollectionPerson(listArrayList, 100_000, timeLAL);
         iterationIterator(listArrayList, timeLAL);
         sortJDK(listArrayList, new LengthPasswordAndNickComparator(), timeLAL);
         iterationForEach(listArrayList, timeLAL);
-        sortCollectionPerson(listArrayList, new LengthPasswordComparator(), timeLAL);
+        sortMergePerson(listArrayList, new LengthPasswordComparator(), timeLAL);
         deleteJDK(listArrayList,timeLAL);
 
         allWorkPerson(listArrayList, timeLAL);
@@ -63,7 +58,7 @@ public class Main {
         List<Animal> listLinkedListAnimal = new LinkedList<>();
         Time timeLLA = new Time();
 
-        addToCollectionAnimal(listLinkedListAnimal, 1000, timeLLA);
+        addToCollectionAnimal(listLinkedListAnimal, 100_000, timeLLA);
         iterationIterator(listLinkedListAnimal, timeLLA);
         sortJDK(listLinkedListAnimal, new AgeAnimalAndNickComparator(), timeLLA);
         iterationForEach(listLinkedListAnimal, timeLLA);
@@ -77,7 +72,7 @@ public class Main {
         List<Animal> listArrayListAnimal = new ArrayList<>();
         Time timeALA = new Time();
 
-        addToCollectionAnimal(listArrayListAnimal, 1000, timeALA);
+        addToCollectionAnimal(listArrayListAnimal, 100_000, timeALA);
         iterationIterator(listArrayListAnimal, timeALA);
         sortJDK(listArrayListAnimal, new AgeAnimalAndNickComparator(), timeALA);
         iterationForEach(listArrayListAnimal, timeALA);
@@ -159,16 +154,11 @@ public class Main {
         long start = System.currentTimeMillis();
 
         Person newPerson;
-        int count = 0;
-        boolean isAdd;
-        while (count < size){
-            newPerson = doPerson(new GeneratorRandomName(),
+        for (int i = 0; i < size; i++) {
+            newPerson = doPerson(new GeneratorRandomNameFromFile(),
                         new GeneratorRandomPassword(),
-                        new GeneratorRandomEngNumString(10));
-            isAdd = personList.add(newPerson);
-            if(isAdd) {
-                count++;
-            }
+                        new GeneratorRandomNickPeopleFromFile());
+            personList.add(newPerson);
         }
 
         long finish = System.currentTimeMillis();
@@ -183,7 +173,7 @@ public class Main {
         Animal newAnimal;
         for (int i = 0; i < size; i++) {
             newAnimal = doAnimal(new GeneratorRandomAgeAnimals(),
-                    new GeneratorRandomNickAnimal());
+                    new GeneratorRandomNickAnimalFromFile());
             animalList.add(newAnimal);
         }
 
@@ -203,8 +193,8 @@ public class Main {
         t.addToList(time);
     }
 
-    public static void sortCollectionPerson(List<Person> list, Comparator<Person> comparator, Time t) {
-        Time time = new Time("сортировка коллекции собственным методом");
+    public static void sortMergePerson(List<Person> list, Comparator<Person> comparator, Time t) {
+        Time time = new Time("сортировка коллекции методом слияния");
         long start = System.currentTimeMillis();
 
         int size = list.size();
@@ -216,15 +206,7 @@ public class Main {
             k++;
         }
 
-        for (int i = 0; i < arr.length-1; i++) {
-            for (int j = 0; j < arr.length-1-i; j++) {
-                if(comparator.compare(arr[j], arr[j+1]) > 0) {
-                    Person temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
-                }
-            }
-        }
+        mergePerson(arr, comparator);
 
         list.clear();
 
@@ -236,10 +218,42 @@ public class Main {
         time.determineDuration(start, finish);
         t.addToList(time);
 
+    }
+
+    public static void mergePerson(Person[] arr, Comparator<Person> comparator) {
+        int lengthArr = arr.length;
+        if(lengthArr < 2) {
+            return;
         }
 
+        Person[]leftArr = Arrays.copyOfRange(arr, 0, arr.length/2);
+        Person[] rightArr = Arrays.copyOfRange(arr, arr.length/2, arr.length);
+
+        mergePerson(leftArr,comparator);
+        mergePerson(rightArr, comparator);
+
+        int cursor1 = 0;
+        int cursor2 = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (cursor1 == leftArr.length) {
+                arr[i] =rightArr[cursor2];
+                cursor2++;
+            } else if (cursor2 == rightArr.length) {
+                arr[i] = leftArr[cursor1];
+                cursor1++;
+            } else if (comparator.compare(leftArr[cursor1],rightArr[cursor2]) <= 0) {
+                arr[i] = leftArr[cursor1];
+                cursor1++;
+            } else { //comparator.compare(leftArr[cursor1],rightArr[cursor2]) < 0
+                arr[i] = rightArr[cursor2];
+                cursor2++;
+
+            }
+        }
+    }
+
     public static void sortCollectionAnimal(List<Animal> list, Comparator<Animal> comparator, Time t) {
-        Time time = new Time("сортировка коллекции собственным методом");
+        Time time = new Time("сортировка коллекции методом слияния");
         long start = System.currentTimeMillis();
 
         int size = list.size();
@@ -251,15 +265,7 @@ public class Main {
             k++;
         }
 
-        for (int i = 0; i < arr.length-1; i++) {
-            for (int j = 0; j < arr.length-1-i; j++) {
-                if(comparator.compare(arr[j], arr[j+1]) > 0) {
-                    Animal temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
-                }
-            }
-        }
+        mergeAnimal(arr, comparator);
 
         list.clear();
 
@@ -272,6 +278,39 @@ public class Main {
         t.addToList(time);
 
     }
+
+    public static void mergeAnimal(Animal[] arr, Comparator<Animal> comparator) {
+        int lengthArr = arr.length;
+        if(lengthArr < 2) {
+            return;
+        }
+
+        Animal[]leftArr = Arrays.copyOfRange(arr, 0, arr.length/2);
+        Animal[] rightArr = Arrays.copyOfRange(arr, arr.length/2, arr.length);
+
+        mergeAnimal(leftArr, comparator);
+        mergeAnimal(rightArr, comparator);
+
+        int cursor1 = 0;
+        int cursor2 = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (cursor1 == leftArr.length) {
+                arr[i] =rightArr[cursor2];
+                cursor2++;
+            } else if (cursor2 == rightArr.length) {
+                arr[i] = leftArr[cursor1];
+                cursor1++;
+            } else if (comparator.compare(leftArr[cursor1],rightArr[cursor2]) <= 0) {
+                arr[i] = leftArr[cursor1];
+                cursor1++;
+            } else { //comparator.compare(leftArr[cursor1],rightArr[cursor2]) < 0
+                arr[i] = rightArr[cursor2];
+                cursor2++;
+
+            }
+        }
+    }
+
 
     public static <T> void iterationIterator (Collection <T> collection, Time t) {
         Time time = new Time("итерирование с помощью iterator");
