@@ -3,7 +3,7 @@ package home_work_4;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class DataContainerTest {
+public class DataContainerMain {
     public static void main(String[] args) {
         Integer [] data = {1, 5, 9, null};
         String [] data1 = {};
@@ -33,7 +33,7 @@ public class DataContainerTest {
         DataContainer[] data2 = {dataContainer, null, dataContainer1, null};
         DataContainer<DataContainer> dataContainer2 = new DataContainer<>(data2);
         System.out.println("Массив до добавления " + Arrays.toString(dataContainer2.getItems()));
-        int index4 = dataContainer2.add(dataContainer1);//1 - [[1, 5, 9, 8, 8], [Hello], [Hello]]
+        int index4 = dataContainer2.add(dataContainer1);//1 - [[1, 5, 9, 8, 8], [Hello], [Hello], null]
         System.out.println("Элемент добавлен в массив по индексу " + index4);
         System.out.println("Массив после добавления " + Arrays.toString(dataContainer2.getItems()));
         System.out.println();
@@ -244,7 +244,7 @@ public class DataContainerTest {
         System.out.println();
 
         //Тесты метода static <T> void sort (DataContainer<? extends Comparable> container)
-        System.out.println("****Тесты метода static <T> void sort (DataContainer<? extends Comparable> container)****");
+       /* System.out.println("****Тесты метода static <T> void sort (DataContainer<? extends Comparable> container)****");
         Integer[]data12 = {3, 1, -3, 777, 0, 16};
         DataContainer<Integer>dataContainer12 = new DataContainer<>(data12);
         System.out.println("До сортировки: " + dataContainer12);
@@ -264,7 +264,7 @@ public class DataContainerTest {
         System.out.println("До сортировки: " + dataContainer14);
         DataContainer.sort(dataContainer14);
         System.out.println("После сортировки: "+dataContainer14);
-        System.out.println();
+        System.out.println();*/
 
         //Тесты метода static <T> void sort (DataContainer<T>container, Comparator<T>comparator)
         System.out.println("****Тесты метода static <T> sort (DataContainer<T>container, Comparator<T>comparator)****");

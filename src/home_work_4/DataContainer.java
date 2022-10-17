@@ -65,7 +65,7 @@ public class DataContainer <T> implements Comparable <DataContainer<T>>, Iterabl
      * @return - внутренний массив
      */
     public T[] getItems() {
-        return data;
+        return Arrays.copyOf(data, data.length);
     }
 
     /**
