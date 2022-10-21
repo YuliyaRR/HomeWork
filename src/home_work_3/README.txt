@@ -1,41 +1,41 @@
-package calcs.simple
+п»їpackage calcs.simple
 
 
-CalculatorWithOperator 	   - 2. Создать класс CalculatorWithOperator.
-CalculatorWithMathCopy     - 3. Создать класс CalculatorWithMathCopy.
-CalculatorWithMathExtends  - 4. Создать класс CalculatorWithMathExtends.
+CalculatorWithOperator 	   - 2. РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ CalculatorWithOperator.
+CalculatorWithMathCopy     - 3. РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ CalculatorWithMathCopy.
+CalculatorWithMathExtends  - 4. РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ CalculatorWithMathExtends.
 
 
 package calcs.additional
 
-CalculatorWithCounterClassic - 5. Создать класс CalculatorWithCounterClassic.
-CalculatorWithCounterAutoSuper - 6. Создать класс CalculatorWithCounterAutoSuper.
-CalculatorWithCounterAutoComposite - 7. Создать класс CalculatorWithCounterAutoComposite.
-CalculatorWithCounterAutoAgregation - 8. Создать класс CalculatorWithCounterAutoAgregation.
-CalculatorWithCounterAutoChoiceAgregation - 9. Создать класс CalculatorWithCounterAutoChoiceAgregation.
-CalculatorWithCounterAutoAgregationInterface. - 11. Создать класс CalculatorWithCounterAutoAgregationInterface. 
-CalculatorWithMemory - 12*. Создать CalculatorWithMemory используя аналогичные принципы построения класса CalculatorWithCounterAutoAgregationInterface.
-CalculatorWithCounterAutoDecorator - 13*. Создать класс CalculatorWithCounterAutoDecorator и CalculatorWithMemoryDecorator
-CalculatorWithMemoryDecorator - 13*. Создать класс CalculatorWithCounterAutoDecorator и CalculatorWithMemoryDecorator
+CalculatorWithCounterClassic - 5. РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ CalculatorWithCounterClassic.
+CalculatorWithCounterAutoSuper - 6. РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ CalculatorWithCounterAutoSuper.
+CalculatorWithCounterAutoComposite - 7. РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ CalculatorWithCounterAutoComposite.
+CalculatorWithCounterAutoAgregation - 8. РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ CalculatorWithCounterAutoAgregation.
+CalculatorWithCounterAutoChoiceAgregation - 9. РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ CalculatorWithCounterAutoChoiceAgregation.
+CalculatorWithCounterAutoAgregationInterface. - 11. РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ CalculatorWithCounterAutoAgregationInterface. 
+CalculatorWithMemory - 12*. РЎРѕР·РґР°С‚СЊ CalculatorWithMemory РёСЃРїРѕР»СЊР·СѓСЏ Р°РЅР°Р»РѕРіРёС‡РЅС‹Рµ РїСЂРёРЅС†РёРїС‹ РїРѕСЃС‚СЂРѕРµРЅРёСЏ РєР»Р°СЃСЃР° CalculatorWithCounterAutoAgregationInterface.
+CalculatorWithCounterAutoDecorator - 13*. РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ CalculatorWithCounterAutoDecorator Рё CalculatorWithMemoryDecorator
+CalculatorWithMemoryDecorator - 13*. РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ CalculatorWithCounterAutoDecorator Рё CalculatorWithMemoryDecorator
 
 
 package calcs.api
 
-ICalculator - 10. Создать интерфейс ICalculator.
+ICalculator - 10. РЎРѕР·РґР°С‚СЊ РёРЅС‚РµСЂС„РµР№СЃ ICalculator.
 
 
 package runners
 
-WithoutCalculatorMain - 1. Создать класс WithoutCalculatorMain;
-CalculatorWithOperatorMain - 2.5 Создать класс CalculatorWithOperatorMain в котором будет точка входа (main метод).
-CalculatorWithMathCopyMain - 3.3 Создать класс CalculatorWithMathCopyMain в котором будет точка входа (main метод).
-CalculatorWithMathExtendsMain - 4.4 Создать класс CalculatorWithMathExtendsMain в котором будет точка входа (main метод).
-CalculatorWithCounterClassicMain - 5.5 Создать класс CalculatorWithCounterClassicMain в котором будет точка входа (main метод).
-CalculatorWithCounterAutoSuperMain - 6.5 Создать класс CalculatorWithCounterAutoSuperMain в котором будет точка входа (main 
-CalculatorWithCounterDelegateCompositeMain - 7.7 Создать класс CalculatorWithCounterDelegateCompositeMain в котором будет точка входа (main метод).
-CalculatorWithCounterDelegateAgregationMain - 8.7 Создать класс CalculatorWithCounterDelegateAgregationMain в котором будет точка входа (main метод). 
-CalculatorWithCounterDelegateChoiceAgregationMain - 9.7 Создать класс CalculatorWithCounterDelegateChoiceAgregationMain в котором будет точка входа (main метод).
-CalculatorWithCounterAutoCompositeInterfaceMain - 11.7 Создать класс CalculatorWithCounterAutoCompositeInterfaceMain в котором будет точка входа (main метод).
-CalculatorWithMemoryMain - 12.7 Создать класс CalculatorWithMemoryMain в котором будет точка входа (main метод).
-CalculatorDecoratorMain  - 13.5 Создать класс CalculatorDecoratorMain в котором будет точка входа (main метод).
+WithoutCalculatorMain - 1. РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ WithoutCalculatorMain;
+CalculatorWithOperatorMain - 2.5 РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ CalculatorWithOperatorMain РІ РєРѕС‚РѕСЂРѕРј Р±СѓРґРµС‚ С‚РѕС‡РєР° РІС…РѕРґР° (main РјРµС‚РѕРґ).
+CalculatorWithMathCopyMain - 3.3 РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ CalculatorWithMathCopyMain РІ РєРѕС‚РѕСЂРѕРј Р±СѓРґРµС‚ С‚РѕС‡РєР° РІС…РѕРґР° (main РјРµС‚РѕРґ).
+CalculatorWithMathExtendsMain - 4.4 РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ CalculatorWithMathExtendsMain РІ РєРѕС‚РѕСЂРѕРј Р±СѓРґРµС‚ С‚РѕС‡РєР° РІС…РѕРґР° (main РјРµС‚РѕРґ).
+CalculatorWithCounterClassicMain - 5.5 РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ CalculatorWithCounterClassicMain РІ РєРѕС‚РѕСЂРѕРј Р±СѓРґРµС‚ С‚РѕС‡РєР° РІС…РѕРґР° (main РјРµС‚РѕРґ).
+CalculatorWithCounterAutoSuperMain - 6.5 РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ CalculatorWithCounterAutoSuperMain РІ РєРѕС‚РѕСЂРѕРј Р±СѓРґРµС‚ С‚РѕС‡РєР° РІС…РѕРґР° (main 
+CalculatorWithCounterDelegateCompositeMain - 7.7 РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ CalculatorWithCounterDelegateCompositeMain РІ РєРѕС‚РѕСЂРѕРј Р±СѓРґРµС‚ С‚РѕС‡РєР° РІС…РѕРґР° (main РјРµС‚РѕРґ).
+CalculatorWithCounterDelegateAgregationMain - 8.7 РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ CalculatorWithCounterDelegateAgregationMain РІ РєРѕС‚РѕСЂРѕРј Р±СѓРґРµС‚ С‚РѕС‡РєР° РІС…РѕРґР° (main РјРµС‚РѕРґ). 
+CalculatorWithCounterDelegateChoiceAgregationMain - 9.7 РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ CalculatorWithCounterDelegateChoiceAgregationMain РІ РєРѕС‚РѕСЂРѕРј Р±СѓРґРµС‚ С‚РѕС‡РєР° РІС…РѕРґР° (main РјРµС‚РѕРґ).
+CalculatorWithCounterAutoCompositeInterfaceMain - 11.7 РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ CalculatorWithCounterAutoCompositeInterfaceMain РІ РєРѕС‚РѕСЂРѕРј Р±СѓРґРµС‚ С‚РѕС‡РєР° РІС…РѕРґР° (main РјРµС‚РѕРґ).
+CalculatorWithMemoryMain - 12.7 РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ CalculatorWithMemoryMain РІ РєРѕС‚РѕСЂРѕРј Р±СѓРґРµС‚ С‚РѕС‡РєР° РІС…РѕРґР° (main РјРµС‚РѕРґ).
+CalculatorDecoratorMain  - 13.5 РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ CalculatorDecoratorMain РІ РєРѕС‚РѕСЂРѕРј Р±СѓРґРµС‚ С‚РѕС‡РєР° РІС…РѕРґР° (main РјРµС‚РѕРґ).
 
