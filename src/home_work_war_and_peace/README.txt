@@ -1,41 +1,41 @@
-¬ÓÈÌ‡ Ë ÏË
-2. –‡·ÓÚ‡ Ò ÍÓÎÎÂÍˆËˇÏË
+Ôªø–í–æ–π–Ω–∞ –∏ –º–∏—Ä
+2. –†–∞–±–æ—Ç–∞ —Å –∫–æ–ª–ª–µ–∫—Ü–∏—è–º–∏
 package runners: Main; 
 package workers: Filler, ReaderFromFile, TextSeparator, Sorter; 
 package comparator: ComparatorWordCount;
 package dto: WordCount
 
-3. Õ‡ÔËÒ‡Ú¸ ËÌÚÂÙÂÈÒ ISearchEngine
+3. –ù–∞–ø–∏—Å–∞—Ç—å –∏–Ω—Ç–µ—Ä—Ñ–µ–π—Å ISearchEngine
 package api: ISearchEngine
 
-4. –Â‡ÎËÁÓ‚‡Ú¸ ËÌÚÂÙÂÈÒ ISearchEngine:
+4. –†–µ–∞–ª–∏–∑–æ–≤–∞—Ç—å –∏–Ω—Ç–µ—Ä—Ñ–µ–π—Å ISearchEngine:
 package dto: ResultSearch;
-package searchers: EasySearch - 4.1 Õ‡ÔËÒ‡Ú¸ ÍÎ‡ÒÒ EasySearch.
-package searchers: RegExSearch - 4.2* Õ‡ÔËÒ‡Ú¸ ÍÎ‡ÒÒ RegExSearch.
-package searchers.decorators: SearchEnginePunctuationNormalizer - 4.3* Õ‡ÔËÒ‡Ú¸ ‰ÂÍÓ‡ÚÓ SearchEnginePunctuationNormalizer.
-package searchers.decorators: SearchEngineWithCaseIgnore - 4.4* Õ‡ÔËÒ‡Ú¸ ‰ÂÍÓ‡ÚÓ ‰Îˇ ISearchEngine ÍÓÚÓ˚È ·Û‰ÂÚ ÔÓÁ‚ÓÎˇÚ¸ ËÒÍ‡Ú¸ ‰‡ÌÌ˚Â ·ÂÁ Û˜∏Ú‡ Â„ËÒÚ‡.
+package searchers: EasySearch - 4.1 –ù–∞–ø–∏—Å–∞—Ç—å –∫–ª–∞—Å—Å EasySearch.
+package searchers: RegExSearch - 4.2* –ù–∞–ø–∏—Å–∞—Ç—å –∫–ª–∞—Å—Å RegExSearch.
+package searchers.decorators: SearchEnginePunctuationNormalizer - 4.3* –ù–∞–ø–∏—Å–∞—Ç—å –¥–µ–∫–æ—Ä–∞—Ç–æ—Ä SearchEnginePunctuationNormalizer.
+package searchers.decorators: SearchEngineWithCaseIgnore - 4.4* –ù–∞–ø–∏—Å–∞—Ç—å –¥–µ–∫–æ—Ä–∞—Ç–æ—Ä –¥–ª—è ISearchEngine –∫–æ—Ç–æ—Ä—ã–π –±—É–¥–µ—Ç –ø–æ–∑–≤–æ–ª—è—Ç—å –∏—Å–∫–∞—Ç—å –¥–∞–Ω–Ω—ã–µ –±–µ–∑ —É—á—ë—Ç–∞ —Ä–µ–≥–∏—Å—Ç—Ä–∞.
 
-5. »ÒÔÓÎ¸ÁÛˇ Â‡ÎËÁ‡ˆËË ËÌÚÂÙÂÈÒ‡ ISearchEngine ‚˚‚ÂÒÚË ËÌÙÓÏ‡ˆË˛ Í‡Í ˜‡ÒÚÓ ‚ÒÚÂ˜‡˛ÚÒˇ ÒÎÓ‚‡ "‚ÓÈÌ‡", "Ë" (Í‡Í ÒÓ˛Á), "ÏË". 
+5. –ò—Å–ø–æ–ª—å–∑—É—è —Ä–µ–∞–ª–∏–∑–∞—Ü–∏–∏ –∏–Ω—Ç–µ—Ä—Ñ–µ–π—Å–∞ ISearchEngine –≤—ã–≤–µ—Å—Ç–∏ –∏–Ω—Ñ–æ—Ä–º–∞—Ü–∏—é –∫–∞–∫ —á–∞—Å—Ç–æ –≤—Å—Ç—Ä–µ—á–∞—é—Ç—Å—è —Å–ª–æ–≤–∞ "–≤–æ–π–Ω–∞", "–∏" (–∫–∞–∫ —Å–æ—é–∑), "–º–∏—Ä". 
 package runners: Main; 
 
-6. œÓÚÂÒÚËÓ‚‡Ú¸ ‡·ÓÚÛ ÒÓÁ‰‡ÌÌ˚ı Â‡ÎËÁ‡ˆËÈ ËÌÚÂÙÂÈÒ‡ ISearchEngine
+6. –ü—Ä–æ—Ç–µ—Å—Ç–∏—Ä–æ–≤–∞—Ç—å —Ä–∞–±–æ—Ç—É —Å–æ–∑–¥–∞–Ω–Ω—ã—Ö —Ä–µ–∞–ª–∏–∑–∞—Ü–∏–π –∏–Ω—Ç–µ—Ä—Ñ–µ–π—Å–∞ ISearchEngine
 test -> package searchers: EasySearchTest, RegExSearchTest;
 test -> package searchers.decorators: SearchEnginePunctuationNormalizerTest, SearchEngineWithCaseIgnoreTest;
 
-+++ ÚÂÒÚ˚ ‰Û„Ëı ÒÓÁ‰‡ÌÌ˚ı ÍÎ‡ÒÒÓ‚:
++++ —Ç–µ—Å—Ç—ã –¥—Ä—É–≥–∏—Ö —Å–æ–∑–¥–∞–Ω–Ω—ã—Ö –∫–ª–∞—Å—Å–æ–≤:
 test -> package comparator:ComparatorWordCountTest;
 test -> package workers: FillerTest, ReaderFromFileTest, TextSeparatorTest, SorterTest; 
 
 
-7.–‡·ÓÚ‡ Ò Ù‡ÈÎ‡ÏË
-package runners: Task7 -> ÂÁÛÎ¸Ú‡Ú Á‡ÔËÒ‡Ì ‚ Ù‡ÈÎ result.txt;
+7.–†–∞–±–æ—Ç–∞ —Å —Ñ–∞–π–ª–∞–º–∏
+package runners: Task7 -> —Ä–µ–∑—É–ª—å—Ç–∞—Ç –∑–∞–ø–∏—Å–∞–Ω –≤ —Ñ–∞–π–ª result.txt;
 package workers: Filler, Printer, ReaderFromFile, WriterToFile;
 package api: ISearchEngine;
 package searchers: EasySearch;
 package dto: ResultSearch;
 
-8.ÃÌÓ„ÓÔÓÚÓ˜ÌÓÂ ÔÓ„‡ÏÏËÓ‚‡ÌËÂ
-package runners: Task8MultiSearch -> ÂÁÛÎ¸Ú‡Ú Á‡ÔËÒ‡Ì ‚ Ù‡ÈÎ resultMultiSearch.txt;
+8.–ú–Ω–æ–≥–æ–ø–æ—Ç–æ—á–Ω–æ–µ –ø—Ä–æ–≥—Ä–∞–º–º–∏—Ä–æ–≤–∞–Ω–∏–µ
+package runners: Task8MultiSearch -> —Ä–µ–∑—É–ª—å—Ç–∞—Ç –∑–∞–ø–∏—Å–∞–Ω –≤ —Ñ–∞–π–ª resultMultiSearch.txt;
 package workers: Filler, ReaderFromFile, WriterToFile, SearchCallable;
 package api: ISearchEngine;
 package searchers: EasySearch;
