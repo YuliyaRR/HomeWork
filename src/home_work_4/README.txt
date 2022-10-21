@@ -1,8 +1,7 @@
-DataContainer - 1-14 класс, реализующий все методы домашки
+п»їDataContainer - 1-14 РєР»Р°СЃСЃ, СЂРµР°Р»РёР·СѓСЋС‰РёР№ РІСЃРµ РјРµС‚РѕРґС‹ РґРѕРјР°С€РєРё
 
-DataContainerTest - 1-14 класс, тестирующий все методы домашки
+DataContainerTest - 1-14 РєР»Р°СЃСЃ, С‚РµСЃС‚РёСЂСѓСЋС‰РёР№ РІСЃРµ РјРµС‚РѕРґС‹ РґРѕРјР°С€РєРё
 
-DataContainersComparator - 9,12 класс, реализующий метод compare из интерфейса Comparator.
-IntegersComparator - 9,12 класс, реализующий метод compare из интерфейса Comparator.
-StringsComparator - 9,12 класс, реализующий метод compare из интерфейса Comparator.
-
+DataContainersComparator - 9,12 РєР»Р°СЃСЃ, СЂРµР°Р»РёР·СѓСЋС‰РёР№ РјРµС‚РѕРґ compare РёР· РёРЅС‚РµСЂС„РµР№СЃР° Comparator.
+IntegersComparator - 9,12 РєР»Р°СЃСЃ, СЂРµР°Р»РёР·СѓСЋС‰РёР№ РјРµС‚РѕРґ compare РёР· РёРЅС‚РµСЂС„РµР№СЃР° Comparator.
+StringsComparator - 9,12 РєР»Р°СЃСЃ, СЂРµР°Р»РёР·СѓСЋС‰РёР№ РјРµС‚РѕРґ compare РёР· РёРЅС‚РµСЂС„РµР№СЃР° Comparator.
