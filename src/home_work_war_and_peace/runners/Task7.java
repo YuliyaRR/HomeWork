@@ -1,37 +1,38 @@
-package home_work_war_and_peace;
+package home_work_war_and_peace.runners;
 
+import home_work_war_and_peace.api.ISearchEngine;
+import home_work_war_and_peace.dto.ResultSearch;
+import home_work_war_and_peace.workers.*;
+import home_work_war_and_peace.searchers.EasySearch;
 import java.io.*;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
 public class Task7 {
     public static void main(String[] args) {
-        Map<Integer,String> books = new HashMap<>();
-        Map<Integer,File> booksFile = new HashMap<>();
         Scanner scanner = new Scanner(System.in);
         String pathDirectory = "HomeWork/eBooks";
 
         File file = new File(pathDirectory);
 
-        if(file.isDirectory()) {
-            File[]arr = file.listFiles();
-            if (arr != null) {
-                for (int i = 0; i < arr.length; i++) {
-                    books.put(i+1, arr[i].getName());
-                    booksFile.put(i+1, arr[i]);
-                }
-            }
-        }
+        Filler filler = new Filler();
+
+        Map<Integer,String> books = filler.fillMapWithBooksName(file);
+        Map<Integer,File> booksFile = filler.fillMapWithBooksFile(file);
+
+        Printer printer = new Printer();
 
         System.out.println("Список книг: ");
-
-        printAllBooks(books);
+        printer.printAllBooks(books);
 
         File fileForResult = new File("HomeWork/result.txt");
 
+        ReaderFromFile readerFromFile = new ReaderFromFile();
+        WriterToFile writerToFile = new WriterToFile();
+        ISearchEngine easySearch = new EasySearch();
+
         int exit = 1;
-        int numberBook = 0;
+        int numberBook;
         while (exit != 0){
             do {
                 System.out.println("Введите номер понравившейся книги: ");
@@ -42,9 +43,7 @@ public class Task7 {
 
             System.out.println("Вы выбрали книгу - " + fileBook.getName());
 
-            String textFromBook = readFromFile(fileBook);
-
-            EasySearch easySearch = new EasySearch();
+            String textFromBook = readerFromFile.readBookFile(fileBook);
 
             int exit2;
             do {
@@ -53,7 +52,7 @@ public class Task7 {
                 long result = easySearch.search(textFromBook, word);
                 ResultSearch resultSearch = new ResultSearch(fileBook.getName(), word, result);
 
-                writeResultToFile(fileForResult, resultSearch);
+                writerToFile.writeResultToFile(fileForResult, resultSearch);
 
                 System.out.printf("Слово %s встречается в тексте %d раз.", word, result);
                 System.out.println("Если хотите прекратить поиск в этой книге - введите 0, " +
@@ -68,32 +67,5 @@ public class Task7 {
 
         System.out.println("Поиск окончен, данные записаны в файл");
     }
-
-    public static void printAllBooks(Map<Integer,String> books){
-        for (Map.Entry<Integer, String> entry : books.entrySet()) {
-            System.out.println(entry.getKey() + ". " + entry.getValue());
-        }
-    }
-
-    public static String readFromFile(File fileBook) {
-        StringBuilder stb = new StringBuilder();
-        try (BufferedReader reader = new BufferedReader(new FileReader(fileBook))) {
-            while (reader.ready()) {
-                stb.append(reader.readLine());
-            }
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-        return stb.toString();
-    }
-
-    public static void writeResultToFile(File result, ResultSearch resultSearch) {
-        try (Writer writer = new FileWriter(result, true)) {
-            writer.write(resultSearch.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
 }
 

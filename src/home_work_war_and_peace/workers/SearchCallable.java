@@ -1,26 +1,28 @@
-package home_work_war_and_peace;
+package home_work_war_and_peace.workers;
 
+import home_work_war_and_peace.api.ISearchEngine;
+import home_work_war_and_peace.dto.ResultSearch;
+import home_work_war_and_peace.searchers.EasySearch;
 import java.io.File;
 import java.util.concurrent.Callable;
 
 public class SearchCallable implements Callable<ResultSearch> {
     private File file;
     private String word;
-    private File fileForResult;
 
-    public SearchCallable(File file, String word, File fileForResult) {
+
+    public SearchCallable(File file, String word) {
         this.file = file;
         this.word = word;
-        this.fileForResult = fileForResult;
     }
 
     @Override
     public ResultSearch call() throws Exception {
         ISearchEngine easySearch = new EasySearch();
-        String text = Task7.readFromFile(file);
+        ReaderFromFile readerFromFile = new ReaderFromFile();
+        String text = readerFromFile.readBookFile(file);
         long result = easySearch.search(text, word);
         ResultSearch resultSearch = new ResultSearch(file.getName(), word, result);
-        Task7.writeResultToFile(fileForResult, resultSearch);
 
         return resultSearch;
     }

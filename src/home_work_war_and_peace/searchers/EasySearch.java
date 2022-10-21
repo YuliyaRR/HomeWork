@@ -1,9 +1,10 @@
-package home_work_war_and_peace;
+package home_work_war_and_peace.searchers;
 
+import home_work_war_and_peace.api.ISearchEngine;
 import java.util.Objects;
 
 //Реализовать поиск используя метод indexOf из класса String.
-public class EasySearch implements ISearchEngine{
+public class EasySearch implements ISearchEngine {
     private long count = 0L;
     private int indexFrom;
     private int index;

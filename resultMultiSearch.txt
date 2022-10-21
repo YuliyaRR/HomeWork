@@ -1,0 +1,154 @@
+Keruak_V-doroge.443229.fb2.txt - how - 0 
+Akunin_Priklyucheniya-Erasta-Fandorina_12_Nefritovye-chetki.144729.fb2.txt - how - 0 
+Adams_Avtostopom-po-Galaktike-Restoran-U-konca-Vselennoy-.155848.fb2.txt - how - 0 
+Gregori_Tyudory_1_Vechnaya-princessa.txt - how - 0 
+J.K. Rowling - Harry Potter and the Prisoner of Azkaban - 1999(ENG).txt - how - 105 
+Bredberi_Grintaunskiy_tsikl_1_Vino_iz_oduvanchikov.111834.fb2.txt - how - 0 
+Folkner_Svet-v-avguste.437934.fb2.txt - how - 0 
+Bredberi_Sborniki-rasskazov-Reya-Bredberi_18_Koshkina-pizhama.72056.fb2.txt - how - 0 
+J.K. Rowling - Harry Potter and_the_Order_of_the_Phoenix-2003(ENG).txt - how - 294 
+Boyn_Malchik-v-polosatoy-pizhame.281362.fb2.txt - how - 0 
+Folkner_Zvuk-i-yarost.437928.fb2.txt - how - 0 
+Bakman_Associaciya-zhilcov_2_Babushka-velela-klanyatsya-i-peredat-chto-prosit-proshcheniya.566002.fb2.txt - how - 0 
+Mann_Volshebnaya-gora.551683.fb2.txt - how - 0 
+Bronte_Agnes-Grey.175232.fb2.txt - how - 0 
+Aleksievich_Golosa-Utopii_1_U-voyny-ne-zhenskoe-lico.373159.fb2.txt - how - 0 
+Bronte_Sherli.138981.fb2.txt - how - 0 
+Eko_Imya-rozy.460991.fb2.txt - how - 0 
+J.K. Rowling - Harry Potter._and_the_Deathly_Hallows_-_2007(ENG).txt - how - 253 
+Bronte_Neznakomka-iz-Uayldfell-Holla.254760.fb2.txt - how - 0 
+J.K. Rowling - Harry Potter_and_the_Half-Blood_Prince_-_2005(ENG).txt - how - 202 
+J.K. Rowling - Harry Potter and the Goblet of Fire - 2000(ENG).txt - how - 208 
+Bronte_Uchitel.185762.fb2.txt - how - 0 
+Keruak_V-doroge.443229.fb2.txt - if - 0 
+Eko_Imya-rozy.460991.fb2.txt - if - 0 
+Bredberi_Sborniki-rasskazov-Reya-Bredberi_18_Koshkina-pizhama.72056.fb2.txt - if - 0 
+J.K. Rowling - Harry Potter and_the_Order_of_the_Phoenix-2003(ENG).txt - if - 522 
+Gregori_Tyudory_1_Vechnaya-princessa.txt - if - 0 
+J.K. Rowling - Harry Potter and the Prisoner of Azkaban - 1999(ENG).txt - if - 207 
+Bredberi_Grintaunskiy_tsikl_1_Vino_iz_oduvanchikov.111834.fb2.txt - if - 0 
+Bakman_Associaciya-zhilcov_2_Babushka-velela-klanyatsya-i-peredat-chto-prosit-proshcheniya.566002.fb2.txt - if - 0 
+J.K. Rowling - Harry Potter._and_the_Deathly_Hallows_-_2007(ENG).txt - if - 362 
+Aleksievich_Golosa-Utopii_1_U-voyny-ne-zhenskoe-lico.373159.fb2.txt - if - 0 
+J.K. Rowling - Harry Potter and the Goblet of Fire - 2000(ENG).txt - if - 334 
+Folkner_Svet-v-avguste.437934.fb2.txt - if - 0 
+Adams_Avtostopom-po-Galaktike-Restoran-U-konca-Vselennoy-.155848.fb2.txt - if - 0 
+Mann_Volshebnaya-gora.551683.fb2.txt - if - 0 
+Bronte_Neznakomka-iz-Uayldfell-Holla.254760.fb2.txt - if - 0 
+Bronte_Agnes-Grey.175232.fb2.txt - if - 0 
+Akunin_Priklyucheniya-Erasta-Fandorina_12_Nefritovye-chetki.144729.fb2.txt - if - 0 
+Bronte_Uchitel.185762.fb2.txt - if - 0 
+Boyn_Malchik-v-polosatoy-pizhame.281362.fb2.txt - if - 0 
+J.K. Rowling - Harry Potter_and_the_Half-Blood_Prince_-_2005(ENG).txt - if - 295 
+Bronte_Sherli.138981.fb2.txt - if - 0 
+Folkner_Zvuk-i-yarost.437928.fb2.txt - if - 0 
+Akunin_Priklyucheniya-Erasta-Fandorina_12_Nefritovye-chetki.144729.fb2.txt - однако - 37 
+Bakman_Associaciya-zhilcov_2_Babushka-velela-klanyatsya-i-peredat-chto-prosit-proshcheniya.566002.fb2.txt - однако - 1 
+Mann_Volshebnaya-gora.551683.fb2.txt - однако - 111 
+Bronte_Agnes-Grey.175232.fb2.txt - однако - 26 
+Bronte_Neznakomka-iz-Uayldfell-Holla.254760.fb2.txt - однако - 48 
+J.K. Rowling - Harry Potter and the Goblet of Fire - 2000(ENG).txt - однако - 0 
+Folkner_Zvuk-i-yarost.437928.fb2.txt - однако - 4 
+Keruak_V-doroge.443229.fb2.txt - однако - 63 
+Eko_Imya-rozy.460991.fb2.txt - однако - 61 
+Boyn_Malchik-v-polosatoy-pizhame.281362.fb2.txt - однако - 2 
+J.K. Rowling - Harry Potter and the Prisoner of Azkaban - 1999(ENG).txt - однако - 0 
+Bredberi_Grintaunskiy_tsikl_1_Vino_iz_oduvanchikov.111834.fb2.txt - однако - 2 
+Bronte_Sherli.138981.fb2.txt - однако - 145 
+Gregori_Tyudory_1_Vechnaya-princessa.txt - однако - 60 
+Adams_Avtostopom-po-Galaktike-Restoran-U-konca-Vselennoy-.155848.fb2.txt - однако - 13 
+Bronte_Uchitel.185762.fb2.txt - однако - 93 
+Folkner_Svet-v-avguste.437934.fb2.txt - однако - 12 
+J.K. Rowling - Harry Potter_and_the_Half-Blood_Prince_-_2005(ENG).txt - однако - 0 
+J.K. Rowling - Harry Potter and_the_Order_of_the_Phoenix-2003(ENG).txt - однако - 0 
+J.K. Rowling - Harry Potter._and_the_Deathly_Hallows_-_2007(ENG).txt - однако - 0 
+Aleksievich_Golosa-Utopii_1_U-voyny-ne-zhenskoe-lico.373159.fb2.txt - однако - 0 
+Bredberi_Sborniki-rasskazov-Reya-Bredberi_18_Koshkina-pizhama.72056.fb2.txt - однако - 8 
+J.K. Rowling - Harry Potter and the Prisoner of Azkaban - 1999(ENG).txt - где - 0 
+Folkner_Svet-v-avguste.437934.fb2.txt - где - 227 
+Folkner_Zvuk-i-yarost.437928.fb2.txt - где - 157 
+Gregori_Tyudory_1_Vechnaya-princessa.txt - где - 102 
+Keruak_V-doroge.443229.fb2.txt - где - 212 
+J.K. Rowling - Harry Potter._and_the_Deathly_Hallows_-_2007(ENG).txt - где - 0 
+Bronte_Agnes-Grey.175232.fb2.txt - где - 52 
+Bronte_Uchitel.185762.fb2.txt - где - 65 
+Aleksievich_Golosa-Utopii_1_U-voyny-ne-zhenskoe-lico.373159.fb2.txt - где - 99 
+Bronte_Neznakomka-iz-Uayldfell-Holla.254760.fb2.txt - где - 89 
+Bredberi_Sborniki-rasskazov-Reya-Bredberi_18_Koshkina-pizhama.72056.fb2.txt - где - 46 
+J.K. Rowling - Harry Potter and_the_Order_of_the_Phoenix-2003(ENG).txt - где - 0 
+Boyn_Malchik-v-polosatoy-pizhame.281362.fb2.txt - где - 62 
+Bronte_Sherli.138981.fb2.txt - где - 150 
+J.K. Rowling - Harry Potter and the Goblet of Fire - 2000(ENG).txt - где - 0 
+J.K. Rowling - Harry Potter_and_the_Half-Blood_Prince_-_2005(ENG).txt - где - 0 
+Bakman_Associaciya-zhilcov_2_Babushka-velela-klanyatsya-i-peredat-chto-prosit-proshcheniya.566002.fb2.txt - где - 85 
+Adams_Avtostopom-po-Galaktike-Restoran-U-konca-Vselennoy-.155848.fb2.txt - где - 65 
+Bredberi_Grintaunskiy_tsikl_1_Vino_iz_oduvanchikov.111834.fb2.txt - где - 64 
+Akunin_Priklyucheniya-Erasta-Fandorina_12_Nefritovye-chetki.144729.fb2.txt - где - 163 
+Eko_Imya-rozy.460991.fb2.txt - где - 259 
+Mann_Volshebnaya-gora.551683.fb2.txt - где - 228 
+Gregori_Tyudory_1_Vechnaya-princessa.txt - вода - 6 
+Bronte_Agnes-Grey.175232.fb2.txt - вода - 1 
+Aleksievich_Golosa-Utopii_1_U-voyny-ne-zhenskoe-lico.373159.fb2.txt - вода - 7 
+Bredberi_Sborniki-rasskazov-Reya-Bredberi_18_Koshkina-pizhama.72056.fb2.txt - вода - 2 
+J.K. Rowling - Harry Potter and_the_Order_of_the_Phoenix-2003(ENG).txt - вода - 0 
+Boyn_Malchik-v-polosatoy-pizhame.281362.fb2.txt - вода - 1 
+Folkner_Zvuk-i-yarost.437928.fb2.txt - вода - 22 
+Keruak_V-doroge.443229.fb2.txt - вода - 2 
+Eko_Imya-rozy.460991.fb2.txt - вода - 17 
+Bredberi_Grintaunskiy_tsikl_1_Vino_iz_oduvanchikov.111834.fb2.txt - вода - 8 
+Bakman_Associaciya-zhilcov_2_Babushka-velela-klanyatsya-i-peredat-chto-prosit-proshcheniya.566002.fb2.txt - вода - 1 
+Mann_Volshebnaya-gora.551683.fb2.txt - вода - 12 
+Bronte_Uchitel.185762.fb2.txt - вода - 0 
+Bronte_Sherli.138981.fb2.txt - вода - 4 
+J.K. Rowling - Harry Potter and the Prisoner of Azkaban - 1999(ENG).txt - вода - 0 
+Akunin_Priklyucheniya-Erasta-Fandorina_12_Nefritovye-chetki.144729.fb2.txt - вода - 12 
+J.K. Rowling - Harry Potter_and_the_Half-Blood_Prince_-_2005(ENG).txt - вода - 0 
+Bronte_Neznakomka-iz-Uayldfell-Holla.254760.fb2.txt - вода - 0 
+Folkner_Svet-v-avguste.437934.fb2.txt - вода - 3 
+J.K. Rowling - Harry Potter._and_the_Deathly_Hallows_-_2007(ENG).txt - вода - 0 
+Adams_Avtostopom-po-Galaktike-Restoran-U-konca-Vselennoy-.155848.fb2.txt - вода - 0 
+J.K. Rowling - Harry Potter and the Goblet of Fire - 2000(ENG).txt - вода - 0 
+Bronte_Sherli.138981.fb2.txt - Harry - 0 
+J.K. Rowling - Harry Potter and the Goblet of Fire - 2000(ENG).txt - Harry - 3253 
+Gregori_Tyudory_1_Vechnaya-princessa.txt - Harry - 0 
+J.K. Rowling - Harry Potter and the Prisoner of Azkaban - 1999(ENG).txt - Harry - 2049 
+Folkner_Svet-v-avguste.437934.fb2.txt - Harry - 0 
+Akunin_Priklyucheniya-Erasta-Fandorina_12_Nefritovye-chetki.144729.fb2.txt - Harry - 0 
+Adams_Avtostopom-po-Galaktike-Restoran-U-konca-Vselennoy-.155848.fb2.txt - Harry - 0 
+J.K. Rowling - Harry Potter_and_the_Half-Blood_Prince_-_2005(ENG).txt - Harry - 2792 
+J.K. Rowling - Harry Potter._and_the_Deathly_Hallows_-_2007(ENG).txt - Harry - 3122 
+Bronte_Uchitel.185762.fb2.txt - Harry - 0 
+Bronte_Neznakomka-iz-Uayldfell-Holla.254760.fb2.txt - Harry - 0 
+J.K. Rowling - Harry Potter and_the_Order_of_the_Phoenix-2003(ENG).txt - Harry - 4092 
+Folkner_Zvuk-i-yarost.437928.fb2.txt - Harry - 0 
+Eko_Imya-rozy.460991.fb2.txt - Harry - 0 
+Bakman_Associaciya-zhilcov_2_Babushka-velela-klanyatsya-i-peredat-chto-prosit-proshcheniya.566002.fb2.txt - Harry - 0 
+Bronte_Agnes-Grey.175232.fb2.txt - Harry - 0 
+Bredberi_Sborniki-rasskazov-Reya-Bredberi_18_Koshkina-pizhama.72056.fb2.txt - Harry - 0 
+Keruak_V-doroge.443229.fb2.txt - Harry - 0 
+Mann_Volshebnaya-gora.551683.fb2.txt - Harry - 0 
+Boyn_Malchik-v-polosatoy-pizhame.281362.fb2.txt - Harry - 0 
+Bredberi_Grintaunskiy_tsikl_1_Vino_iz_oduvanchikov.111834.fb2.txt - Harry - 0 
+Aleksievich_Golosa-Utopii_1_U-voyny-ne-zhenskoe-lico.373159.fb2.txt - Harry - 0 
+Gregori_Tyudory_1_Vechnaya-princessa.txt - Ron - 0 
+Keruak_V-doroge.443229.fb2.txt - Ron - 0 
+Akunin_Priklyucheniya-Erasta-Fandorina_12_Nefritovye-chetki.144729.fb2.txt - Ron - 0 
+Adams_Avtostopom-po-Galaktike-Restoran-U-konca-Vselennoy-.155848.fb2.txt - Ron - 0 
+J.K. Rowling - Harry Potter_and_the_Half-Blood_Prince_-_2005(ENG).txt - Ron - 878 
+Bronte_Neznakomka-iz-Uayldfell-Holla.254760.fb2.txt - Ron - 0 
+Bronte_Sherli.138981.fb2.txt - Ron - 0 
+Boyn_Malchik-v-polosatoy-pizhame.281362.fb2.txt - Ron - 0 
+Folkner_Zvuk-i-yarost.437928.fb2.txt - Ron - 0 
+Bredberi_Grintaunskiy_tsikl_1_Vino_iz_oduvanchikov.111834.fb2.txt - Ron - 0 
+Bredberi_Sborniki-rasskazov-Reya-Bredberi_18_Koshkina-pizhama.72056.fb2.txt - Ron - 0 
+Bakman_Associaciya-zhilcov_2_Babushka-velela-klanyatsya-i-peredat-chto-prosit-proshcheniya.566002.fb2.txt - Ron - 0 
+J.K. Rowling - Harry Potter and the Prisoner of Azkaban - 1999(ENG).txt - Ron - 786 
+J.K. Rowling - Harry Potter and_the_Order_of_the_Phoenix-2003(ENG).txt - Ron - 1298 
+Folkner_Svet-v-avguste.437934.fb2.txt - Ron - 0 
+Eko_Imya-rozy.460991.fb2.txt - Ron - 0 
+Mann_Volshebnaya-gora.551683.fb2.txt - Ron - 0 
+J.K. Rowling - Harry Potter._and_the_Deathly_Hallows_-_2007(ENG).txt - Ron - 1174 
+Bronte_Agnes-Grey.175232.fb2.txt - Ron - 0 
+J.K. Rowling - Harry Potter and the Goblet of Fire - 2000(ENG).txt - Ron - 1052 
+Bronte_Uchitel.185762.fb2.txt - Ron - 0 
+Aleksievich_Golosa-Utopii_1_U-voyny-ne-zhenskoe-lico.373159.fb2.txt - Ron - 0 

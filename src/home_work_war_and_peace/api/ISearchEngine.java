@@ -1,4 +1,4 @@
-package home_work_war_and_peace;
+package home_work_war_and_peace.api;
 
 public interface ISearchEngine {
 
