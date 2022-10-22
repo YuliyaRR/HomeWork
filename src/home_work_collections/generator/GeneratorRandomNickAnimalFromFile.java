@@ -1,5 +1,7 @@
 package home_work_collections.generator;
 
+import home_work_collections.api.IStringGenerator;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;

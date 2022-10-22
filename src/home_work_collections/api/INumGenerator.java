@@ -1,4 +1,4 @@
-package home_work_collections.generator;
+package home_work_collections.api;
 
 public interface INumGenerator {
     int generateNum();

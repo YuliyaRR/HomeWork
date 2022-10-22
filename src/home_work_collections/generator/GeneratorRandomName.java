@@ -1,10 +1,12 @@
 package home_work_collections.generator;
 
+import home_work_collections.api.IStringGenerator;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class GeneratorRandomName implements IStringGenerator{
+public class GeneratorRandomName implements IStringGenerator {
     private List<String> peopleNames = new ArrayList<>();
 
     {

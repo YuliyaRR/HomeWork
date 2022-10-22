@@ -1,5 +1,6 @@
 package home_work_collections.generator;
 
+import home_work_collections.api.INumGenerator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

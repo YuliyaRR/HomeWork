@@ -1,10 +1,12 @@
 package home_work_collections.generator;
 
+import home_work_collections.api.IStringGenerator;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class GeneratorRandomNickAnimal implements IStringGenerator{
+public class GeneratorRandomNickAnimal implements IStringGenerator {
     private List<String> animalsNicks = new ArrayList<>();
 
     {
